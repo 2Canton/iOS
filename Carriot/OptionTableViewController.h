@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  OptionTableViewController.h
 //  Carriot
 //
 //  Created by user on 12/26/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface OptionTableViewController : UITableViewController
 
 @end
-

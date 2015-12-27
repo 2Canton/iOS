@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OptionImages</key>
+	<array>
+		<string>history.png</string>
+		<string>routes.png</string>
+		<string>building.png</string>
+		<string>event.png</string>
+		<string>church.png</string>
+		<string>facebook.png</string>
+		<string>website.png</string>
+		<string>message.png</string>
+	</array>
+	<key>OptionNames</key>
+	<array>
+		<string>Historia</string>
+		<string>Rutas</string>
+		<string>Sitios de interés</string>
+		<string>Eventos</string>
+		<string>Religión</string>
+		<string>Facebook</string>
+		<string>Sitio Web</string>
+		<string>Contacto</string>
+	</array>
+</dict>
+</plist>
