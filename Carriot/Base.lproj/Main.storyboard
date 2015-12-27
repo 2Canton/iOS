@@ -35,7 +35,7 @@
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="2f8-XS-bU3"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -50,6 +50,7 @@
                                         <constraint firstItem="6SQ-53-FOI" firstAttribute="leading" secondItem="9MJ-UD-odB" secondAttribute="trailing" constant="8" id="xrL-85-xq1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58523706896551719" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="imgLogo" destination="9MJ-UD-odB" id="kko-mR-pyE"/>
                                     <outlet property="lblTitle" destination="6SQ-53-FOI" id="Eqa-RP-tYg"/>
