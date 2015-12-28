@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@",_idRoute);
+    [self.activityIndicator startAnimating];
     
     
     // se establece la imagen de fondo

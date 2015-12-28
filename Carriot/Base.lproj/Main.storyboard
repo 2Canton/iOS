@@ -226,6 +226,11 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="eht-HN-yMA">
+                            <rect key="frame" x="0.0" y="265" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleTableViewCell" rowHeight="173" id="czG-XP-KI9" customClass="OptionTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="173"/>
@@ -275,6 +280,9 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="sUc-e5-Xrf"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="eht-HN-yMA" id="BXp-dO-dCn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMX-5L-leg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
