@@ -1,5 +1,5 @@
 //
-//  ruta.h
+//  Route.h
 //  Carriot
 //
 //  Created by user on 12/27/15.
@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ruta : NSObject
+@interface Route : NSObject
 
 @property (nonatomic, retain) NSString *id;
 @property (nonatomic, retain) NSString *nombre;
 @property (nonatomic, retain) NSString *idempresa;
+
 
 @end

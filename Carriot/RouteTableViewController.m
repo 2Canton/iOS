@@ -8,13 +8,15 @@
 
 #import "RouteTableViewController.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
-#import "ruta.h"
+#import "Route.h"
 #import "OptionTableViewCell.h"
 #import "Option.h"
 
 @interface RouteTableViewController ()
 {
     NSMutableArray *routesCollection;
+    NSArray *routeImages;
+    NSString * imageName;
 }
 @end
 
@@ -33,30 +35,20 @@
     
     [self.tableView setBackgroundView:tableBackgroundView];
     
-    [self loadData];
+    // se llena el array de imágenes
+    routeImages = @[@"bus0.png",@"bus1.png"];
+    
+    [self loadRoutes];
     
 }
 
-- (void) loadData
-{
-    routesCollection = [[NSMutableArray alloc]init];
-    
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Historia" PictureURL:@"history.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Rutas" PictureURL:@"routes.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Sitios de interés" PictureURL:@"building.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Eventos" PictureURL:@"event.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Religión" PictureURL:@"church.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Facebook" PictureURL:@"facebook.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Sitio Web" PictureURL:@"website.png"]];
-    [routesCollection addObject:[[Option alloc] initWithTitle:@"Contacto" PictureURL:@"message.png"]];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)getLatestLoans
+- (void) loadRoutes
 {
     routesCollection = [[NSMutableArray alloc] init];
     
@@ -78,7 +70,7 @@
                 // items is NSArray of records that match query
                 //NSLog(@"Name: %@", [item objectForKey:@"nombre"]);
                 
-                ruta *route = [[ruta alloc] init];
+                Route *route = [[Route alloc] init];
                 
                 for (NSString *key in item) {
                     if ([route respondsToSelector:NSSelectorFromString(key)]) {
@@ -88,7 +80,7 @@
                 
                 
                 
-                [routesCollection addObject:item];
+                [routesCollection addObject:route];
                 
             }
             
@@ -135,11 +127,16 @@
     
     long row = [indexPath section];
     
-    Option *option = [routesCollection objectAtIndex:row];
+    Route  *route = [routesCollection objectAtIndex:row];
     
-    [cell.lblTitle setText:option.title];
-    [cell.imgLogo setImage:[UIImage imageNamed:option.image]];
     
+    [cell.lblTitle setText:route.nombre];
+    
+    imageName = [NSString stringWithFormat:@"bus%@.png",route.idempresa];
+    
+    
+    //[cell.imgLogo setImage:[UIImage imageNamed:[routeImages objectAtIndex:[option.idempresa integerValue]]]];
+    [cell.imgLogo setImage:[UIImage imageNamed:imageName]];
     
     [cell.layer setCornerRadius:35.0f];
     

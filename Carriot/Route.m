@@ -1,14 +1,13 @@
 //
-//  ruta.m
+//  Route.m
 //  Carriot
 //
 //  Created by user on 12/27/15.
 //  Copyright © 2015 user. All rights reserved.
 //
 
-#import "ruta.h"
+#import "Route.h"
 
-@implementation ruta
-
+@implementation Route
 
 @end
