@@ -80,6 +80,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Nfi-lL-Wna">
+                            <rect key="frame" x="0.0" y="265" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="routeTableViewCell" rowHeight="173" id="Y6T-ae-K3m" customClass="OptionTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="173"/>
@@ -120,6 +125,7 @@
                                 <connections>
                                     <outlet property="imgLogo" destination="qnC-mo-Hm5" id="aHI-Bb-mG4"/>
                                     <outlet property="lblTitle" destination="FDD-Uo-d2C" id="Nb9-4z-VQN"/>
+                                    <segue destination="iTC-IG-vFq" kind="show" identifier="schedule" trigger="accessoryAction" id="uve-ch-OmY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -129,10 +135,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="6eJ-iI-H59"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Nfi-lL-Wna" id="uth-cB-FUj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBV-Kl-i7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898" y="437"/>
+            <point key="canvasLocation" x="1887" y="425"/>
         </scene>
         <!--Historia-->
         <scene sceneID="GUh-8H-Ypb">
@@ -208,6 +217,68 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nrM-oQ-g1W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="241" y="387"/>
+        </scene>
+        <!--Horarios-->
+        <scene sceneID="cFI-bq-qw9">
+            <objects>
+                <tableViewController title="Horarios" id="iTC-IG-vFq" customClass="ScheduleTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="fJO-dr-8gX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleTableViewCell" rowHeight="173" id="czG-XP-KI9" customClass="OptionTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="173"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="czG-XP-KI9" id="KQ1-7w-xhw">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-WY-SPq">
+                                            <rect key="frame" x="58" y="34" width="131" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="104" id="Q7Z-Xo-8Fp"/>
+                                                <constraint firstAttribute="width" constant="131" id="S3I-I5-j6t"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuZ-2S-B2l">
+                                            <rect key="frame" x="197" y="75" width="386" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="DCr-4X-CyA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FuZ-2S-B2l" secondAttribute="bottom" constant="68" id="18S-vq-x6m"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FuZ-2S-B2l" secondAttribute="trailing" constant="9" id="8jJ-pq-cQL"/>
+                                        <constraint firstItem="FuZ-2S-B2l" firstAttribute="leading" secondItem="UZw-WY-SPq" secondAttribute="trailing" constant="8" id="P1b-CB-26n"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="UZw-WY-SPq" secondAttribute="bottom" constant="26" id="bqe-Zx-O15"/>
+                                        <constraint firstItem="UZw-WY-SPq" firstAttribute="top" secondItem="KQ1-7w-xhw" secondAttribute="topMargin" constant="26" id="hUI-sJ-8IM"/>
+                                        <constraint firstItem="FuZ-2S-B2l" firstAttribute="leading" secondItem="UZw-WY-SPq" secondAttribute="trailing" constant="8" id="lEb-wT-YAt"/>
+                                        <constraint firstItem="UZw-WY-SPq" firstAttribute="leading" secondItem="KQ1-7w-xhw" secondAttribute="leadingMargin" constant="50" id="oLo-rV-o9C"/>
+                                        <constraint firstItem="FuZ-2S-B2l" firstAttribute="top" secondItem="KQ1-7w-xhw" secondAttribute="topMargin" constant="67" id="ohq-1k-hMb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58523706900000005" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgLogo" destination="UZw-WY-SPq" id="Tox-D7-1SM"/>
+                                    <outlet property="lblTitle" destination="FuZ-2S-B2l" id="DbW-jo-sB2"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iTC-IG-vFq" id="Xbx-GU-Acm"/>
+                            <outlet property="delegate" destination="iTC-IG-vFq" id="Zlh-Qd-sbf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sUc-e5-Xrf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kMX-5L-leg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2668" y="425"/>
         </scene>
     </scenes>
     <resources>

@@ -12,11 +12,11 @@
 #import "OptionTableViewCell.h"
 #import "Option.h"
 #import "AppDelegate.h"
+#import "ScheduleTableViewController.h"
 
 @interface RouteTableViewController ()
 {
     NSMutableArray *routesCollection;
-    NSArray *routeImages;
     NSString * imageName;
 }
 @end
@@ -36,8 +36,7 @@
     
     [self.tableView setBackgroundView:tableBackgroundView];
     
-    // se llena el array de imágenes
-    routeImages = @[@"bus0.png",@"bus1.png"];
+    [self.activityIndicator startAnimating];
     
     [self loadRoutes];
     
@@ -52,7 +51,7 @@
 - (void) loadRoutes
 {
     routesCollection = [[NSMutableArray alloc] init];
-        
+    
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
     MSTable *table = [client tableWithName:@"ruta"];
@@ -86,7 +85,10 @@
             
             [self.tableView reloadData];
             
+
+            
         }
+        [self.activityIndicator stopAnimating];
         
         
     }];
@@ -140,4 +142,32 @@
     [cell.layer setCornerRadius:35.0f];
     
     return cell;
-}@end
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"schedule"])
+    {
+        ScheduleTableViewController * view = [segue destinationViewController];
+        
+        NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
+        
+        long row = [myIndexPath section];
+        
+        Route  *route = [routesCollection objectAtIndex:row];
+        
+        view.idRoute = route.id;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // mostramos el segue
+    [self performSegueWithIdentifier:@"schedule" sender:self];
+    
+}
+
+
+
+@end
