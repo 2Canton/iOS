@@ -22,7 +22,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-UD-odB">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-UD-odB">
                                             <rect key="frame" x="58" y="34" width="131" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="104" id="Cbp-mF-OX3"/>
@@ -30,7 +30,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SQ-53-FOI">
-                                            <rect key="frame" x="197" y="75" width="386" height="21"/>
+                                            <rect key="frame" x="197" y="34" width="386" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="2f8-XS-bU3"/>
                                             </constraints>
@@ -45,8 +45,8 @@
                                         <constraint firstItem="9MJ-UD-odB" firstAttribute="leading" secondItem="04J-sU-p2l" secondAttribute="leadingMargin" constant="50" id="WRG-Cv-bHb"/>
                                         <constraint firstItem="9MJ-UD-odB" firstAttribute="top" secondItem="04J-sU-p2l" secondAttribute="topMargin" constant="26" id="eS3-PH-i9S"/>
                                         <constraint firstItem="6SQ-53-FOI" firstAttribute="leading" secondItem="9MJ-UD-odB" secondAttribute="trailing" constant="8" id="nI9-SD-iL4"/>
-                                        <constraint firstItem="6SQ-53-FOI" firstAttribute="top" secondItem="04J-sU-p2l" secondAttribute="topMargin" constant="67" id="sVU-BZ-BZv"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="6SQ-53-FOI" secondAttribute="bottom" constant="68" id="vDm-Eo-MJp"/>
+                                        <constraint firstItem="6SQ-53-FOI" firstAttribute="top" secondItem="04J-sU-p2l" secondAttribute="topMargin" constant="26" id="sVU-BZ-BZv"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="6SQ-53-FOI" secondAttribute="bottom" constant="26" id="vDm-Eo-MJp"/>
                                         <constraint firstItem="6SQ-53-FOI" firstAttribute="leading" secondItem="9MJ-UD-odB" secondAttribute="trailing" constant="8" id="xrL-85-xq1"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -66,6 +66,7 @@
                     <connections>
                         <segue destination="jfD-bv-6Mx" kind="show" identifier="history" id="krq-36-q6R"/>
                         <segue destination="JJh-De-shv" kind="show" identifier="routes" id="mNG-KM-MWe"/>
+                        <segue destination="qiI-7R-qBJ" kind="show" identifier="companiesCategory" id="nDQ-6i-ziH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZi-Yh-SqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -93,7 +94,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qnC-mo-Hm5">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="qnC-mo-Hm5">
                                             <rect key="frame" x="58" y="34" width="131" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="104" id="2dr-Bk-5Er"/>
@@ -101,7 +102,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDD-Uo-d2C">
-                                            <rect key="frame" x="197" y="75" width="386" height="21"/>
+                                            <rect key="frame" x="197" y="34" width="386" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="f0v-Fd-2V3"/>
                                             </constraints>
@@ -115,9 +116,9 @@
                                         <constraint firstItem="qnC-mo-Hm5" firstAttribute="top" secondItem="oSB-e6-ZnS" secondAttribute="topMargin" constant="26" id="2T9-7F-I08"/>
                                         <constraint firstItem="FDD-Uo-d2C" firstAttribute="leading" secondItem="qnC-mo-Hm5" secondAttribute="trailing" constant="8" id="3hA-nb-YxF"/>
                                         <constraint firstItem="FDD-Uo-d2C" firstAttribute="leading" secondItem="qnC-mo-Hm5" secondAttribute="trailing" constant="8" id="6jD-rT-giQ"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="FDD-Uo-d2C" secondAttribute="bottom" constant="68" id="UaJ-Q9-gZg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FDD-Uo-d2C" secondAttribute="bottom" constant="26" id="UaJ-Q9-gZg"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FDD-Uo-d2C" secondAttribute="trailing" constant="9" id="VO5-5J-tXA"/>
-                                        <constraint firstItem="FDD-Uo-d2C" firstAttribute="top" secondItem="oSB-e6-ZnS" secondAttribute="topMargin" constant="67" id="WO2-0H-hgn"/>
+                                        <constraint firstItem="FDD-Uo-d2C" firstAttribute="top" secondItem="oSB-e6-ZnS" secondAttribute="topMargin" constant="26" id="WO2-0H-hgn"/>
                                         <constraint firstItem="qnC-mo-Hm5" firstAttribute="leading" secondItem="oSB-e6-ZnS" secondAttribute="leadingMargin" constant="50" id="Z2g-P8-bp9"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -239,7 +240,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-WY-SPq">
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-WY-SPq">
                                             <rect key="frame" x="58" y="34" width="131" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="104" id="Q7Z-Xo-8Fp"/>
@@ -247,7 +248,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FuZ-2S-B2l">
-                                            <rect key="frame" x="197" y="75" width="386" height="21"/>
+                                            <rect key="frame" x="197" y="34" width="386" height="104"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="DCr-4X-CyA"/>
                                             </constraints>
@@ -257,14 +258,14 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="FuZ-2S-B2l" secondAttribute="bottom" constant="68" id="18S-vq-x6m"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FuZ-2S-B2l" secondAttribute="bottom" constant="26" id="18S-vq-x6m"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="FuZ-2S-B2l" secondAttribute="trailing" constant="9" id="8jJ-pq-cQL"/>
                                         <constraint firstItem="FuZ-2S-B2l" firstAttribute="leading" secondItem="UZw-WY-SPq" secondAttribute="trailing" constant="8" id="P1b-CB-26n"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="UZw-WY-SPq" secondAttribute="bottom" constant="26" id="bqe-Zx-O15"/>
                                         <constraint firstItem="UZw-WY-SPq" firstAttribute="top" secondItem="KQ1-7w-xhw" secondAttribute="topMargin" constant="26" id="hUI-sJ-8IM"/>
                                         <constraint firstItem="FuZ-2S-B2l" firstAttribute="leading" secondItem="UZw-WY-SPq" secondAttribute="trailing" constant="8" id="lEb-wT-YAt"/>
                                         <constraint firstItem="UZw-WY-SPq" firstAttribute="leading" secondItem="KQ1-7w-xhw" secondAttribute="leadingMargin" constant="50" id="oLo-rV-o9C"/>
-                                        <constraint firstItem="FuZ-2S-B2l" firstAttribute="top" secondItem="KQ1-7w-xhw" secondAttribute="topMargin" constant="67" id="ohq-1k-hMb"/>
+                                        <constraint firstItem="FuZ-2S-B2l" firstAttribute="top" secondItem="KQ1-7w-xhw" secondAttribute="topMargin" constant="26" id="ohq-1k-hMb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58523706900000005" colorSpace="calibratedRGB"/>
@@ -394,8 +395,79 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="3478" y="419"/>
         </scene>
+        <!--Companies Category-->
+        <scene sceneID="0ST-te-kgP">
+            <objects>
+                <tableViewController title="Companies Category" id="qiI-7R-qBJ" customClass="CompaniesCategoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="7Y5-sa-IAG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="91X-5m-FWK">
+                            <rect key="frame" x="0.0" y="265" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="companiesCategoryTableViewCell" rowHeight="173" id="iiz-Gl-x9P" customClass="OptionTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="173"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iiz-Gl-x9P" id="FU6-yd-YMQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="YJg-Ol-puJ">
+                                            <rect key="frame" x="58" y="34" width="131" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="131" id="Adu-vA-7LE"/>
+                                                <constraint firstAttribute="height" constant="104" id="PWQ-90-kUv"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="im8-1Q-vV5">
+                                            <rect key="frame" x="197" y="34" width="386" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Mjt-xs-pIA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="im8-1Q-vV5" secondAttribute="bottom" constant="26" id="EoC-ww-Vks"/>
+                                        <constraint firstItem="im8-1Q-vV5" firstAttribute="leading" secondItem="YJg-Ol-puJ" secondAttribute="trailing" constant="8" id="Jmu-20-5NJ"/>
+                                        <constraint firstItem="im8-1Q-vV5" firstAttribute="top" secondItem="FU6-yd-YMQ" secondAttribute="topMargin" constant="26" id="O97-NS-Shh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="im8-1Q-vV5" secondAttribute="trailing" constant="9" id="STN-Gp-kyd"/>
+                                        <constraint firstItem="YJg-Ol-puJ" firstAttribute="top" secondItem="FU6-yd-YMQ" secondAttribute="topMargin" constant="26" id="VaN-31-nfR"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YJg-Ol-puJ" secondAttribute="bottom" constant="26" id="ebU-5t-PQj"/>
+                                        <constraint firstItem="YJg-Ol-puJ" firstAttribute="leading" secondItem="FU6-yd-YMQ" secondAttribute="leadingMargin" constant="50" id="hN9-J4-Pb5"/>
+                                        <constraint firstItem="im8-1Q-vV5" firstAttribute="leading" secondItem="YJg-Ol-puJ" secondAttribute="trailing" constant="8" id="laO-2g-IDf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58523706900000005" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgLogo" destination="YJg-Ol-puJ" id="2Zc-5a-xB5"/>
+                                    <outlet property="lblTitle" destination="im8-1Q-vV5" id="C2F-cq-TDs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qiI-7R-qBJ" id="EgZ-dd-3yl"/>
+                            <outlet property="delegate" destination="qiI-7R-qBJ" id="CUI-Ko-EqV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6uz-O6-Bfc"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="91X-5m-FWK" id="f35-wH-o0O"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ned-We-YJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413" y="1167"/>
+        </scene>
     </scenes>
     <resources>
         <image name="iglesia.png" width="1108" height="1060"/>
+        <image name="picture.png" width="100" height="100"/>
     </resources>
 </document>

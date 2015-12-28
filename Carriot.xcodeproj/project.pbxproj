@@ -27,6 +27,10 @@
 		78B282C31C30F8C300EA579A /* RoutePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282C21C30F8C300EA579A /* RoutePath.m */; };
 		78B282C61C30FA6200EA579A /* RoutePathTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282C51C30FA6200EA579A /* RoutePathTableViewController.m */; };
 		78B282C91C30FE7200EA579A /* HourDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282C81C30FE7200EA579A /* HourDescriptionTableViewCell.m */; };
+		78B323531C31A7540031A315 /* CompaniesCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B323521C31A7540031A315 /* CompaniesCategory.m */; };
+		78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */; };
+		78B323591C31ADC40031A315 /* picture_removed.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323571C31ADC40031A315 /* picture_removed.png */; };
+		78B3235A1C31ADC40031A315 /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323581C31ADC40031A315 /* picture.png */; };
 		78BAFBBA1C2F454500FEF250 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBB91C2F454500FEF250 /* main.m */; };
 		78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBBC1C2F454500FEF250 /* AppDelegate.m */; };
 		78BAFBC51C2F454500FEF250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BAFBC41C2F454500FEF250 /* Assets.xcassets */; };
@@ -97,6 +101,12 @@
 		78B282C51C30FA6200EA579A /* RoutePathTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePathTableViewController.m; sourceTree = "<group>"; };
 		78B282C71C30FE7200EA579A /* HourDescriptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourDescriptionTableViewCell.h; sourceTree = "<group>"; };
 		78B282C81C30FE7200EA579A /* HourDescriptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		78B323511C31A7540031A315 /* CompaniesCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompaniesCategory.h; sourceTree = "<group>"; };
+		78B323521C31A7540031A315 /* CompaniesCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompaniesCategory.m; sourceTree = "<group>"; };
+		78B323541C31A7B20031A315 /* CompaniesCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompaniesCategoryTableViewController.h; sourceTree = "<group>"; };
+		78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompaniesCategoryTableViewController.m; sourceTree = "<group>"; };
+		78B323571C31ADC40031A315 /* picture_removed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture_removed.png; sourceTree = "<group>"; };
+		78B323581C31ADC40031A315 /* picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture.png; sourceTree = "<group>"; };
 		78BAFBB51C2F454500FEF250 /* Carriot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carriot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BAFBB91C2F454500FEF250 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78BAFBBB1C2F454500FEF250 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -246,6 +256,8 @@
 				78B282A91C30D75400EA579A /* ScheduleTableViewController.m */,
 				78B282C41C30FA6200EA579A /* RoutePathTableViewController.h */,
 				78B282C51C30FA6200EA579A /* RoutePathTableViewController.m */,
+				78B323541C31A7B20031A315 /* CompaniesCategoryTableViewController.h */,
+				78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -253,6 +265,8 @@
 		78BAFBF61C2F476300FEF250 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				78B323571C31ADC40031A315 /* picture_removed.png */,
+				78B323581C31ADC40031A315 /* picture.png */,
 				78B282AB1C30EEDE00EA579A /* calendar0.png */,
 				78B282AC1C30EEDE00EA579A /* calendar1.png */,
 				78B282AD1C30EEDE00EA579A /* calendar2.png */,
@@ -292,6 +306,8 @@
 				78B282A61C30D6EC00EA579A /* Schedule.m */,
 				78B282C11C30F8C300EA579A /* RoutePath.h */,
 				78B282C21C30F8C300EA579A /* RoutePath.m */,
+				78B323511C31A7540031A315 /* CompaniesCategory.h */,
+				78B323521C31A7540031A315 /* CompaniesCategory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -416,6 +432,7 @@
 				78B282BB1C30EEDE00EA579A /* calendar5.png in Resources */,
 				78BAFBC51C2F454500FEF250 /* Assets.xcassets in Resources */,
 				78EAE34E1C2FA92100EC494D /* iglesia.png in Resources */,
+				78B323591C31ADC40031A315 /* picture_removed.png in Resources */,
 				78B282BC1C30EEDE00EA579A /* calendar6.png in Resources */,
 				78EAE3561C2FAF5F00EC494D /* event.png in Resources */,
 				78B282BE1C30EEDE00EA579A /* calendar8.png in Resources */,
@@ -424,6 +441,7 @@
 				78B282BA1C30EEDE00EA579A /* calendar4.png in Resources */,
 				78B282B61C30EEDE00EA579A /* calendar0.png in Resources */,
 				78EAE3581C2FAF5F00EC494D /* trash.png in Resources */,
+				78B3235A1C31ADC40031A315 /* picture.png in Resources */,
 				78B282BD1C30EEDE00EA579A /* calendar7.png in Resources */,
 				78B282BF1C30EEDE00EA579A /* calendar9.png in Resources */,
 				78B282B71C30EEDE00EA579A /* calendar1.png in Resources */,
@@ -456,8 +474,10 @@
 				78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */,
 				78B282C61C30FA6200EA579A /* RoutePathTableViewController.m in Sources */,
 				78B282A71C30D6EC00EA579A /* Schedule.m in Sources */,
+				78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */,
 				78EAE3681C2FAFF600EC494D /* Option.m in Sources */,
 				78B282C91C30FE7200EA579A /* HourDescriptionTableViewCell.m in Sources */,
+				78B323531C31A7540031A315 /* CompaniesCategory.m in Sources */,
 				78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */,
 				78BAFBF51C2F46F500FEF250 /* OptionTableViewController.m in Sources */,
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,

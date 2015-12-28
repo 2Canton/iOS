@@ -118,7 +118,7 @@
             break;
             
         case 2:
-            viewName = @"";
+            viewName = @"companiesCategory";
             break;
             
         default:
