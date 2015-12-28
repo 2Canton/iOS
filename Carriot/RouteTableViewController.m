@@ -11,6 +11,7 @@
 #import "Route.h"
 #import "OptionTableViewCell.h"
 #import "Option.h"
+#import "AppDelegate.h"
 
 @interface RouteTableViewController ()
 {
@@ -51,10 +52,8 @@
 - (void) loadRoutes
 {
     routesCollection = [[NSMutableArray alloc] init];
-    
-    MSClient *client = [MSClient
-                        clientWithApplicationURLString:@"https://puriscal.azure-mobile.net/"
-                        applicationKey:@"CtavDeXtaLeUclXFhrPrjLJiUeeEek84"];
+        
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
     MSTable *table = [client tableWithName:@"ruta"];
     MSQuery *query = [table query];
