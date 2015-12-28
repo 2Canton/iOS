@@ -21,9 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    [self.tableView setContentInset:UIEdgeInsetsMake(20, self.tableView.contentInset.left, self.tableView.contentInset.bottom, self.tableView.contentInset.right)];
-    
     // se establece la imagen de fondo
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
@@ -100,6 +97,44 @@
     [cell.layer setCornerRadius:35.0f];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // obtenemos el índice del elemento que se seleccionó
+    NSInteger index = indexPath.section;
+    
+    // variable que indica cuál vista debe abrir
+    NSString * viewName = @"";
+    
+    // de acuerdo al elemento seleccionado modificamos el nombre del segue
+    switch (index) {
+        case 0:
+            viewName = @"history";
+            break;
+            
+        case 1:
+            viewName = @"routes";
+            break;
+            
+        case 2:
+            viewName = @"";
+            break;
+            
+        default:
+            break;
+    }
+    
+    // verficamos si hay un segue para mostrar
+    if(![viewName isEqualToString:@""])
+    {
+        // mostramos el segue
+        [self performSegueWithIdentifier:viewName sender:self];
+    }
+    
+    
+    
+    
 }
 
 @end
