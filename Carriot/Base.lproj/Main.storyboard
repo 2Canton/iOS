@@ -300,6 +300,11 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="tnL-rg-ue1">
+                            <rect key="frame" x="0.0" y="212" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="routePathTableViewCell" rowHeight="120" id="9Nu-xo-1Qz" customClass="HourDescriptionTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="600" height="120"/>
@@ -381,6 +386,9 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                             <outlet property="delegate" destination="FM0-GA-wLv" id="Se0-gT-hIs"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="activityIndicator" destination="tnL-rg-ue1" id="U3C-wT-evz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="et4-JB-CuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,4 +10,8 @@
 
 @interface RoutePathTableViewController : UITableViewController
 
+@property (strong,nonatomic) NSString * idRoute;
+@property (strong,nonatomic) NSString * idSchedule;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+
 @end

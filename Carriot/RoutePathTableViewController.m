@@ -9,10 +9,11 @@
 #import "RoutePathTableViewController.h"
 #import "RoutePath.h"
 #import "HourDescriptionTableViewCell.h"
+#import "AppDelegate.h"
 
 @interface RoutePathTableViewController ()
 {
-    NSMutableArray * optionsArray;
+    NSMutableArray * collection;
 }
 @end
 
@@ -28,6 +29,8 @@
     
     [self.tableView setBackgroundView:tableBackgroundView];
     
+    [self.activityIndicator startAnimating];
+    
     // cargamos los datos en un array
     [self loadData];
     
@@ -41,11 +44,50 @@
 
 - (void) loadData
 {
-    optionsArray = [[NSMutableArray alloc]init];
+    collection = [[NSMutableArray alloc]init];
     
-    for (int i = 0; i < 20; i++) {
-        [optionsArray addObject:[[RoutePath alloc] initWithPlace:@"Puriscal" Hour:@"10:00am"]];
-    }
+    MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
+    
+    NSDictionary *parameters = @{ @"idRuta": _idRoute, @"idHorario" : _idSchedule };
+    
+    [client invokeAPI:@"scheduledescription"
+                 body:nil
+           HTTPMethod:@"GET"
+           parameters:parameters
+              headers:nil
+           completion:  ^(NSDictionary *result,
+                          NSHTTPURLResponse *response,
+                          NSError *error){
+               if(error) { // error is nil if no error occured
+                   NSLog(@"ERROR %@", error);
+               } else {
+                   
+                   for(NSDictionary *item in result)
+                   {
+                       
+                       RoutePath *routePath = [[RoutePath alloc] init];
+                       
+                       for (NSString *key in item) {
+                           if ([routePath respondsToSelector:NSSelectorFromString(key)]) {
+                               [routePath setValue:[item valueForKey:key] forKey:key];
+                           }
+                       }
+                       
+                       
+                       
+                       [collection addObject:routePath];
+                       
+                   }
+                   
+                   [self.tableView reloadData];
+                   
+                   
+               }
+               
+               [self.activityIndicator stopAnimating];
+               
+               
+           }];
     
 }
 
@@ -55,7 +97,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return optionsArray.count;
+    return collection.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -84,10 +126,11 @@
     
     long row = [indexPath section];
     
-    RoutePath *option = [optionsArray objectAtIndex:row];
+    RoutePath *option = [collection objectAtIndex:row];
     
     [cell.lblPlace setText:option.nombresitiosalida];
     [cell.lblHour setText:option.hora];
+    [cell.lblNote setText:option.nota];
     
     
     [cell.layer setCornerRadius:35.0f];

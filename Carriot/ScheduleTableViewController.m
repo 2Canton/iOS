@@ -12,6 +12,7 @@
 #import "OptionTableViewCell.h"
 #import "AppDelegate.h"
 #include <stdlib.h>
+#import "RoutePathTableViewController.h"
 
 @interface ScheduleTableViewController ()
 {
@@ -158,6 +159,23 @@
     // mostramos el segue
     [self performSegueWithIdentifier:@"routePath" sender:self];
     
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"routePath"])
+    {
+        RoutePathTableViewController * view = [segue destinationViewController];
+        
+        NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
+        
+        long row = [myIndexPath section];
+        
+        Schedule  *schedule = [shedulesCollection objectAtIndex:row];
+        
+        view.idRoute = _idRoute;
+        view.idSchedule = schedule.id;
+    }
 }
 
 
