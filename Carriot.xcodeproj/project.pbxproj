@@ -13,6 +13,17 @@
 		78B282A41C30D37200EA579A /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A31C30D37200EA579A /* Route.m */; };
 		78B282A71C30D6EC00EA579A /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A61C30D6EC00EA579A /* Schedule.m */; };
 		78B282AA1C30D75400EA579A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A91C30D75400EA579A /* ScheduleTableViewController.m */; };
+		78B282B61C30EEDE00EA579A /* calendar0.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AB1C30EEDE00EA579A /* calendar0.png */; };
+		78B282B71C30EEDE00EA579A /* calendar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AC1C30EEDE00EA579A /* calendar1.png */; };
+		78B282B81C30EEDE00EA579A /* calendar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AD1C30EEDE00EA579A /* calendar2.png */; };
+		78B282B91C30EEDE00EA579A /* calendar3.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AE1C30EEDE00EA579A /* calendar3.png */; };
+		78B282BA1C30EEDE00EA579A /* calendar4.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AF1C30EEDE00EA579A /* calendar4.png */; };
+		78B282BB1C30EEDE00EA579A /* calendar5.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B01C30EEDE00EA579A /* calendar5.png */; };
+		78B282BC1C30EEDE00EA579A /* calendar6.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B11C30EEDE00EA579A /* calendar6.png */; };
+		78B282BD1C30EEDE00EA579A /* calendar7.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B21C30EEDE00EA579A /* calendar7.png */; };
+		78B282BE1C30EEDE00EA579A /* calendar8.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B31C30EEDE00EA579A /* calendar8.png */; };
+		78B282BF1C30EEDE00EA579A /* calendar9.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B41C30EEDE00EA579A /* calendar9.png */; };
+		78B282C01C30EEDE00EA579A /* calendar10.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B51C30EEDE00EA579A /* calendar10.png */; };
 		78BAFBBA1C2F454500FEF250 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBB91C2F454500FEF250 /* main.m */; };
 		78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBBC1C2F454500FEF250 /* AppDelegate.m */; };
 		78BAFBC51C2F454500FEF250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BAFBC41C2F454500FEF250 /* Assets.xcassets */; };
@@ -66,6 +77,17 @@
 		78B282A61C30D6EC00EA579A /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
 		78B282A81C30D75400EA579A /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
 		78B282A91C30D75400EA579A /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewController.m; sourceTree = "<group>"; };
+		78B282AB1C30EEDE00EA579A /* calendar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar0.png; sourceTree = "<group>"; };
+		78B282AC1C30EEDE00EA579A /* calendar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar1.png; sourceTree = "<group>"; };
+		78B282AD1C30EEDE00EA579A /* calendar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar2.png; sourceTree = "<group>"; };
+		78B282AE1C30EEDE00EA579A /* calendar3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar3.png; sourceTree = "<group>"; };
+		78B282AF1C30EEDE00EA579A /* calendar4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar4.png; sourceTree = "<group>"; };
+		78B282B01C30EEDE00EA579A /* calendar5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar5.png; sourceTree = "<group>"; };
+		78B282B11C30EEDE00EA579A /* calendar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar6.png; sourceTree = "<group>"; };
+		78B282B21C30EEDE00EA579A /* calendar7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar7.png; sourceTree = "<group>"; };
+		78B282B31C30EEDE00EA579A /* calendar8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar8.png; sourceTree = "<group>"; };
+		78B282B41C30EEDE00EA579A /* calendar9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar9.png; sourceTree = "<group>"; };
+		78B282B51C30EEDE00EA579A /* calendar10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar10.png; sourceTree = "<group>"; };
 		78BAFBB51C2F454500FEF250 /* Carriot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carriot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BAFBB91C2F454500FEF250 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		78BAFBBB1C2F454500FEF250 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -218,6 +240,17 @@
 		78BAFBF61C2F476300FEF250 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				78B282AB1C30EEDE00EA579A /* calendar0.png */,
+				78B282AC1C30EEDE00EA579A /* calendar1.png */,
+				78B282AD1C30EEDE00EA579A /* calendar2.png */,
+				78B282AE1C30EEDE00EA579A /* calendar3.png */,
+				78B282AF1C30EEDE00EA579A /* calendar4.png */,
+				78B282B01C30EEDE00EA579A /* calendar5.png */,
+				78B282B11C30EEDE00EA579A /* calendar6.png */,
+				78B282B21C30EEDE00EA579A /* calendar7.png */,
+				78B282B31C30EEDE00EA579A /* calendar8.png */,
+				78B282B41C30EEDE00EA579A /* calendar9.png */,
+				78B282B51C30EEDE00EA579A /* calendar10.png */,
 				78EAE3591C2FAF9500EC494D /* building.png */,
 				78EAE35A1C2FAF9500EC494D /* facebook.png */,
 				78EAE35B1C2FAF9500EC494D /* history.png */,
@@ -352,22 +385,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				78EAE3631C2FAF9500EC494D /* routes.png in Resources */,
+				78B282B91C30EEDE00EA579A /* calendar3.png in Resources */,
 				78EAE3641C2FAF9500EC494D /* website.png in Resources */,
 				78EAE35F1C2FAF9500EC494D /* building.png in Resources */,
 				78EAE3621C2FAF9500EC494D /* message.png in Resources */,
 				78EAE3601C2FAF9500EC494D /* facebook.png in Resources */,
 				78EAE3551C2FAF5F00EC494D /* church.png in Resources */,
 				78B282961C3086C300EA579A /* Main.storyboard in Resources */,
+				78B282C01C30EEDE00EA579A /* calendar10.png in Resources */,
 				78BAFBC81C2F454500FEF250 /* LaunchScreen.storyboard in Resources */,
+				78B282B81C30EEDE00EA579A /* calendar2.png in Resources */,
 				78EAE3571C2FAF5F00EC494D /* news.png in Resources */,
 				78EAE34D1C2FA92100EC494D /* bus1.png in Resources */,
 				78EAE34C1C2FA92100EC494D /* bus0.png in Resources */,
+				78B282BB1C30EEDE00EA579A /* calendar5.png in Resources */,
 				78BAFBC51C2F454500FEF250 /* Assets.xcassets in Resources */,
 				78EAE34E1C2FA92100EC494D /* iglesia.png in Resources */,
+				78B282BC1C30EEDE00EA579A /* calendar6.png in Resources */,
 				78EAE3561C2FAF5F00EC494D /* event.png in Resources */,
+				78B282BE1C30EEDE00EA579A /* calendar8.png in Resources */,
 				78EAE36A1C2FB0DF00EC494D /* resources.plist in Resources */,
 				78EAE3611C2FAF9500EC494D /* history.png in Resources */,
+				78B282BA1C30EEDE00EA579A /* calendar4.png in Resources */,
+				78B282B61C30EEDE00EA579A /* calendar0.png in Resources */,
 				78EAE3581C2FAF5F00EC494D /* trash.png in Resources */,
+				78B282BD1C30EEDE00EA579A /* calendar7.png in Resources */,
+				78B282BF1C30EEDE00EA579A /* calendar9.png in Resources */,
+				78B282B71C30EEDE00EA579A /* calendar1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

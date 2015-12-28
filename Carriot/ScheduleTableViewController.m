@@ -11,11 +11,11 @@
 #import "Schedule.h"
 #import "OptionTableViewCell.h"
 #import "AppDelegate.h"
+#include <stdlib.h>
 
 @interface ScheduleTableViewController ()
 {
     NSMutableArray *shedulesCollection;
-    NSString * imageName;
 }
 @end
 
@@ -137,15 +137,19 @@
     
     [cell.lblTitle setText:schedule.dias];
     
-    //imageName = [NSString stringWithFormat:@"bus%@.png",route.idempresa];
-    
-    
-    //[cell.imgLogo setImage:[UIImage imageNamed:[routeImages objectAtIndex:[option.idempresa integerValue]]]];
-    [cell.imgLogo setImage:[UIImage imageNamed:imageName]];
+    [cell.imgLogo setImage:[UIImage imageNamed:[self randomImage]]];
     
     [cell.layer setCornerRadius:35.0f];
     
     return cell;
+}
+
+- (NSString *) randomImage
+{
+    int number = arc4random_uniform(11);
+    
+    return [NSString stringWithFormat:@"calendar%i.png",number];
+    
 }
 
 
