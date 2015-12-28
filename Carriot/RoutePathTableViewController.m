@@ -128,8 +128,34 @@
     
     RoutePath *option = [collection objectAtIndex:row];
     
+    // obtenemos las cifras que correspondes a la hora
+    NSString * hourAux = [option.hora substringToIndex:2];
+    
+    NSString * minutes = [option.hora substringFromIndex:2];
+    
+    // convertimos el número a int
+    int hourInt = [hourAux intValue];
+    
+    
+    // se verifica si la hora es menor a 12
+    if (hourInt < 12) {
+        hourAux = [NSString stringWithFormat:@"%@%@",option.hora,
+            @" am"];
+    }
+    else if (hourInt == 12)
+    {
+        hourAux = [NSString stringWithFormat:@"%@%@",option.hora,
+                   @" md"];
+    }
+    else{
+        hourAux = [NSString stringWithFormat:@"%i%@%@",hourInt - 12,minutes,
+                   @" pm"];
+
+
+    }
+    
     [cell.lblPlace setText:option.nombresitiosalida];
-    [cell.lblHour setText:option.hora];
+    [cell.lblHour setText:hourAux];
     [cell.lblNote setText:option.nota];
     
     
