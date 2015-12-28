@@ -80,7 +80,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Nfi-lL-Wna">
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="Nfi-lL-Wna">
                             <rect key="frame" x="0.0" y="265" width="600" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
@@ -226,7 +226,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="eht-HN-yMA">
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="eht-HN-yMA">
                             <rect key="frame" x="0.0" y="265" width="600" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
@@ -280,13 +280,111 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="sUc-e5-Xrf"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="emY-pn-h0K">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                     <connections>
                         <outlet property="activityIndicator" destination="eht-HN-yMA" id="BXp-dO-dCn"/>
+                        <segue destination="FM0-GA-wLv" kind="show" identifier="routePath" id="xWt-zS-lim"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMX-5L-leg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2668" y="425"/>
+        </scene>
+        <!--Route Path Table View Controller-->
+        <scene sceneID="TAa-wp-g3c">
+            <objects>
+                <tableViewController id="FM0-GA-wLv" customClass="RoutePathTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="goS-bu-ZVY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="routePathTableViewCell" rowHeight="120" id="9Nu-xo-1Qz" customClass="HourDescriptionTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Nu-xo-1Qz" id="tMX-yg-9hE">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sitio Salida:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08x-Et-TL5">
+                                            <rect key="frame" x="34" y="20" width="94" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="94" id="DA8-Ms-DKK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHG-6T-eEM">
+                                            <rect key="frame" x="34" y="49" width="94" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nota:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIP-Gr-hrX">
+                                            <rect key="frame" x="34" y="78" width="94" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcK-bY-mMa">
+                                            <rect key="frame" x="136" y="20" width="456" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O02-n3-t2e">
+                                            <rect key="frame" x="136" y="49" width="456" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-uU-2ld">
+                                            <rect key="frame" x="136" y="78" width="456" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="O02-n3-t2e" firstAttribute="leading" secondItem="vcK-bY-mMa" secondAttribute="leading" id="0RY-h8-CG2"/>
+                                        <constraint firstItem="08x-Et-TL5" firstAttribute="baseline" secondItem="vcK-bY-mMa" secondAttribute="baseline" id="257-5P-2NA"/>
+                                        <constraint firstItem="xIP-Gr-hrX" firstAttribute="trailing" secondItem="XHG-6T-eEM" secondAttribute="trailing" id="DjV-x2-ejC"/>
+                                        <constraint firstItem="xIP-Gr-hrX" firstAttribute="leading" secondItem="XHG-6T-eEM" secondAttribute="leading" id="IjV-nW-yys"/>
+                                        <constraint firstItem="O02-n3-t2e" firstAttribute="leading" secondItem="6Jp-uU-2ld" secondAttribute="leading" id="RKr-91-l29"/>
+                                        <constraint firstItem="6Jp-uU-2ld" firstAttribute="baseline" secondItem="xIP-Gr-hrX" secondAttribute="baseline" id="Ske-jb-JCo"/>
+                                        <constraint firstItem="08x-Et-TL5" firstAttribute="leading" secondItem="XHG-6T-eEM" secondAttribute="leading" id="Y4V-e5-dDw"/>
+                                        <constraint firstItem="O02-n3-t2e" firstAttribute="trailing" secondItem="tMX-yg-9hE" secondAttribute="trailingMargin" id="Y8B-yL-RFc"/>
+                                        <constraint firstItem="vcK-bY-mMa" firstAttribute="trailing" secondItem="O02-n3-t2e" secondAttribute="trailing" id="cP5-4B-QDE"/>
+                                        <constraint firstItem="XHG-6T-eEM" firstAttribute="top" secondItem="08x-Et-TL5" secondAttribute="bottom" constant="8" symbolic="YES" id="ioH-x0-jgV"/>
+                                        <constraint firstItem="xIP-Gr-hrX" firstAttribute="top" secondItem="XHG-6T-eEM" secondAttribute="bottom" constant="8" symbolic="YES" id="kq4-bl-nHc"/>
+                                        <constraint firstItem="XHG-6T-eEM" firstAttribute="baseline" secondItem="O02-n3-t2e" secondAttribute="baseline" id="m0g-Us-gd9"/>
+                                        <constraint firstItem="O02-n3-t2e" firstAttribute="trailing" secondItem="6Jp-uU-2ld" secondAttribute="trailing" id="mEI-XP-jF7"/>
+                                        <constraint firstItem="O02-n3-t2e" firstAttribute="leading" secondItem="XHG-6T-eEM" secondAttribute="trailing" constant="8" id="oIz-Zb-cZH"/>
+                                        <constraint firstItem="vcK-bY-mMa" firstAttribute="leading" secondItem="08x-Et-TL5" secondAttribute="trailing" constant="8" symbolic="YES" id="q2B-Q4-usX"/>
+                                        <constraint firstItem="08x-Et-TL5" firstAttribute="leading" secondItem="tMX-yg-9hE" secondAttribute="leadingMargin" constant="26" id="sgm-br-VVv"/>
+                                        <constraint firstItem="O02-n3-t2e" firstAttribute="centerY" secondItem="tMX-yg-9hE" secondAttribute="centerY" id="yok-n0-r4E"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60264008619999998" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="lblHour" destination="O02-n3-t2e" id="wkD-4v-qWk"/>
+                                    <outlet property="lblNote" destination="6Jp-uU-2ld" id="wFA-Uz-Cnb"/>
+                                    <outlet property="lblPlace" destination="vcK-bY-mMa" id="eJO-gN-NYO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FM0-GA-wLv" id="y9B-yQ-hlD"/>
+                            <outlet property="delegate" destination="FM0-GA-wLv" id="Se0-gT-hIs"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="et4-JB-CuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3478" y="419"/>
         </scene>
     </scenes>
     <resources>

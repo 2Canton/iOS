@@ -152,6 +152,14 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    // mostramos el segue
+    [self performSegueWithIdentifier:@"routePath" sender:self];
+    
+}
+
 
 
 @end
