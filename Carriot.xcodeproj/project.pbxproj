@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78431BCC1C33165F0063749E /* EventsCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */; };
+		78431BCF1C3317470063749E /* EventCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCE1C3317470063749E /* EventCategory.m */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
 		78B282961C3086C300EA579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B282941C3086C300EA579A /* Main.storyboard */; };
 		78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B2829E1C308A5100EA579A /* RouteTableViewController.m */; };
@@ -83,6 +85,10 @@
 /* Begin PBXFileReference section */
 		246B99EA850D8FB1C687AA5B /* libPods-Carriot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Carriot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7608EB67B65F5B215D906185 /* Pods-Carriot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carriot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carriot/Pods-Carriot.debug.xcconfig"; sourceTree = "<group>"; };
+		78431BCA1C33165F0063749E /* EventsCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCategoryTableViewController.h; sourceTree = "<group>"; };
+		78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCategoryTableViewController.m; sourceTree = "<group>"; };
+		78431BCD1C3317470063749E /* EventCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCategory.h; sourceTree = "<group>"; };
+		78431BCE1C3317470063749E /* EventCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCategory.m; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		78B282951C3086C300EA579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78B2829D1C308A5100EA579A /* RouteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTableViewController.h; sourceTree = "<group>"; };
@@ -284,6 +290,8 @@
 				78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */,
 				78B3235B1C31B1E60031A315 /* CompaniesTableViewController.h */,
 				78B3235C1C31B1E60031A315 /* CompaniesTableViewController.m */,
+				78431BCA1C33165F0063749E /* EventsCategoryTableViewController.h */,
+				78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -339,6 +347,8 @@
 				78B323521C31A7540031A315 /* CompaniesCategory.m */,
 				78B3235E1C31B2970031A315 /* Company.h */,
 				78B3235F1C31B2970031A315 /* Company.m */,
+				78431BCD1C3317470063749E /* EventCategory.h */,
+				78431BCE1C3317470063749E /* EventCategory.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -573,6 +583,7 @@
 			files = (
 				78B282C31C30F8C300EA579A /* RoutePath.m in Sources */,
 				78BAFBEE1C2F45F500FEF250 /* OptionTableViewCell.m in Sources */,
+				78431BCF1C3317470063749E /* EventCategory.m in Sources */,
 				78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */,
 				78B282C61C30FA6200EA579A /* RoutePathTableViewController.m in Sources */,
 				78B282A71C30D6EC00EA579A /* Schedule.m in Sources */,
@@ -583,6 +594,7 @@
 				78B323531C31A7540031A315 /* CompaniesCategory.m in Sources */,
 				78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */,
 				78B3235D1C31B1E60031A315 /* CompaniesTableViewController.m in Sources */,
+				78431BCC1C33165F0063749E /* EventsCategoryTableViewController.m in Sources */,
 				78B323601C31B2970031A315 /* Company.m in Sources */,
 				78BAFBF51C2F46F500FEF250 /* OptionTableViewController.m in Sources */,
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,

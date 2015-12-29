@@ -121,6 +121,10 @@
             viewName = @"companiesCategory";
             break;
             
+        case 3:
+            viewName = @"eventsCategory";
+            break;
+            
         default:
             break;
     }

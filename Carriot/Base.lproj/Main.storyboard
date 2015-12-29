@@ -67,6 +67,7 @@
                         <segue destination="jfD-bv-6Mx" kind="show" identifier="history" id="krq-36-q6R"/>
                         <segue destination="JJh-De-shv" kind="show" identifier="routes" id="mNG-KM-MWe"/>
                         <segue destination="qiI-7R-qBJ" kind="show" identifier="companiesCategory" id="nDQ-6i-ziH"/>
+                        <segue destination="FCD-e5-yXA" kind="show" identifier="eventsCategory" id="7yI-V9-xfS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZi-Yh-SqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,7 +465,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ned-We-YJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1053" y="1187"/>
+            <point key="canvasLocation" x="1477" y="1195"/>
         </scene>
         <!--Companies Table View Controller-->
         <scene sceneID="SaT-hO-qOa">
@@ -637,7 +638,77 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15v-eC-f9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="1187"/>
+            <point key="canvasLocation" x="2241" y="1179"/>
+        </scene>
+        <!--Events Category-->
+        <scene sceneID="NS3-Gl-nZp">
+            <objects>
+                <tableViewController title="Events Category" id="FCD-e5-yXA" customClass="EventsCategoryTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="173" sectionHeaderHeight="28" sectionFooterHeight="28" id="xGW-f8-7K0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="2TD-oD-MTG">
+                            <rect key="frame" x="0.0" y="265" width="600" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.98829828310000001" green="1" blue="0.9978659607" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCategoryTableViewCell" rowHeight="173" id="OTN-2k-emC" customClass="OptionTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="173"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OTN-2k-emC" id="J4H-Sj-Q0w">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="172"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture.png" translatesAutoresizingMaskIntoConstraints="NO" id="iWh-kr-BQA">
+                                            <rect key="frame" x="58" y="34" width="131" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="104" id="0Bf-2Y-060"/>
+                                                <constraint firstAttribute="width" constant="131" id="eC0-Lb-0Hg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9t-vJ-6ld">
+                                            <rect key="frame" x="197" y="34" width="386" height="104"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="6jS-GP-GBi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="F9t-vJ-6ld" secondAttribute="bottom" constant="26" id="6pe-f3-sNY"/>
+                                        <constraint firstItem="iWh-kr-BQA" firstAttribute="top" secondItem="J4H-Sj-Q0w" secondAttribute="topMargin" constant="26" id="Fp7-03-7F8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="F9t-vJ-6ld" secondAttribute="trailing" constant="9" id="QDi-hY-9qx"/>
+                                        <constraint firstItem="F9t-vJ-6ld" firstAttribute="leading" secondItem="iWh-kr-BQA" secondAttribute="trailing" constant="8" id="R1Q-VY-F52"/>
+                                        <constraint firstItem="F9t-vJ-6ld" firstAttribute="top" secondItem="J4H-Sj-Q0w" secondAttribute="topMargin" constant="26" id="Uwn-Jb-gbz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="iWh-kr-BQA" secondAttribute="bottom" constant="26" id="hcN-VW-g8g"/>
+                                        <constraint firstItem="F9t-vJ-6ld" firstAttribute="leading" secondItem="iWh-kr-BQA" secondAttribute="trailing" constant="8" id="khK-14-XGB"/>
+                                        <constraint firstItem="iWh-kr-BQA" firstAttribute="leading" secondItem="J4H-Sj-Q0w" secondAttribute="leadingMargin" constant="50" id="xyI-KP-uPh"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58523706900000005" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="imgLogo" destination="iWh-kr-BQA" id="5EH-sg-Kn1"/>
+                                    <outlet property="lblTitle" destination="F9t-vJ-6ld" id="LB6-xt-x8g"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FCD-e5-yXA" id="rcR-sl-cwc"/>
+                            <outlet property="delegate" destination="FCD-e5-yXA" id="Nh5-4P-vl4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="UO5-fN-yVl"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="2TD-oD-MTG" id="bYl-rI-aoS"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cC6-Nd-Uje" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="1203"/>
         </scene>
     </scenes>
     <resources>
