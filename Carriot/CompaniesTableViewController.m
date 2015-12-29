@@ -11,6 +11,7 @@
 #import "Company.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CompaniesTableViewController ()
 {
@@ -147,6 +148,10 @@
     [cell.lblAddress setText:company.direccion];
     
     [cell.lblTime setText:company.horario];
+    
+    // Here we use the new provided sd_setImageWithURL: method to load the web image
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:company.urlimagen]
+                      placeholderImage:[UIImage imageNamed:@"picture.png"]];
 
 
     /*
