@@ -12,6 +12,7 @@
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
 #import "CompaniesTableViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CompaniesCategoryTableViewController ()
 {
@@ -33,8 +34,8 @@
     
     [self.activityIndicator startAnimating];
     
-    //[self loadData];
-    [self loadDataOffline];
+    [self loadData];
+    //[self loadDataOffline];
     
 }
 
@@ -138,33 +139,12 @@
     
     long row = [indexPath section];
     
-    CompaniesCategory  *route = [collection objectAtIndex:row];
+    CompaniesCategory  *companyCategory = [collection objectAtIndex:row];
     
-    [cell.lblTitle setText:route.nombre];
+    [cell.lblTitle setText:companyCategory.nombre];
     
-    // se carga la imagen
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        NSData * imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:route.urlimagen]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-           
-            if (imgData)
-            {
-                UIImage *image = [UIImage imageWithData:imgData];
-                
-                if (image) {
-                    [cell.imgLogo setImage:image];
-                }
-                else
-                {
-                    [cell.imgLogo setImage:[UIImage imageNamed:@"picture_removed.png"]];
-                }
-            }
-            
-        });
-        
-    });
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:companyCategory.urlimagen]
+                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
     
     [cell.layer setCornerRadius:35.0f];
