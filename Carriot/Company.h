@@ -34,5 +34,10 @@
 
 @property (nonatomic, retain) NSString * urlimagen;
 
+- (id) initWithId: (NSString *) pId
+             Name: (NSString *) pName
+          Address: (NSString *) pAddress
+         Schedule: (NSString *) pSchedule
+       PictureURL: (NSString *) pPictureURL;
 
 @end

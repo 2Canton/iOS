@@ -33,7 +33,8 @@
     
     [self.activityIndicator startAnimating];
     
-    [self loadData];
+    //[self loadData];
+    [self loadDataOffline];
     
 }
 
@@ -41,6 +42,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) loadDataOffline
+{
+    collection = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 10; i++) {
+         [collection addObject:[[CompaniesCategory alloc] initWithId:@"1" Name:@"Nombre1" PictureURL:@"url" Description:@"desc"]];
+    }
+   
+
 }
 
 - (void) loadData

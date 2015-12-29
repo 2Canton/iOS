@@ -33,13 +33,28 @@
     [self.activityIndicator startAnimating];
     
     [self loadData];
-    
+    //[self loadDataOffline];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) loadDataOffline
+{
+    collection = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < 10; i++) {
+        [collection addObject:[[Company alloc] initWithId:@"1"
+                                                     Name:@"Suuuuuuuuuuuuuuuuuuuuuuuuuuuuuper nooooooooombreeeeeee lml "
+                                                  Address:@"300 metros oeste del cementerio de Puriscal"
+                                                 Schedule:@"Lunes a Viernes de 7:00am a 7:00pm"
+                                               PictureURL:@"url"]];
+    }
+    
+    
 }
 
 - (void) loadData
@@ -129,6 +144,15 @@
     
     [cell.lblName setText:company.nombre];
     
+    [cell.lblAddress setText:company.direccion];
+    
+    [cell.lblTime setText:company.horario];
+    
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: company.urlimagen]];
+    
+    [cell.imgLogo setImage:[UIImage imageWithData: imageData]];
+    
+   /*
     // se carga la imagen
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -152,6 +176,7 @@
         });
         
     });
+    */
     
     
     [cell.layer setCornerRadius:35.0f];

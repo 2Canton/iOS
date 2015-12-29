@@ -10,4 +10,20 @@
 
 @implementation CompaniesCategory
 
+- (id) initWithId: (NSString *) pId
+             Name: (NSString *) pName
+       PictureURL: (NSString *) pPictureURL
+      Description: (NSString *) pDescription
+{
+    if (self = [super init])
+    {
+        _id = pId;
+        _nombre = pName;
+        _urlimagen = pPictureURL;
+        _descripcion = pDescription;
+    }
+    
+    return self;
+}
+
 @end

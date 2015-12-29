@@ -15,4 +15,9 @@
 @property (nonatomic, retain) NSString *urlimagen;
 @property (nonatomic, retain) NSString *descripcion;
 
+- (id) initWithId: (NSString *) pId
+          Name: (NSString *) pName
+       PictureURL: (NSString *) pPictureURL
+      Description: (NSString *) pDescription;
+
 @end
