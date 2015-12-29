@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CompanyTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
+@property (weak, nonatomic) IBOutlet UIImage *imgLogo;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblTime;
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress;

@@ -147,12 +147,15 @@
     [cell.lblAddress setText:company.direccion];
     
     [cell.lblTime setText:company.horario];
-    
+
+
+    /*
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: company.urlimagen]];
     
     [cell.imgLogo setImage:[UIImage imageWithData: imageData]];
-    
-   /*
+    */
+   
+    /*
     // se carga la imagen
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -176,14 +179,15 @@
         });
         
     });
+    
     */
+    
     
     
     [cell.layer setCornerRadius:35.0f];
     
     return cell;
 }
-
 
 
 

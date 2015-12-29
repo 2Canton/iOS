@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "73B206CB37FC25C0F250982F969EE0EA71FAF8F3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "627DF597F5C79C29C5D5555C52576CC0BD24D5F2" : 0,
+    "4CCEBB648A19C6D07D8E0C889CC7B171CD60C8D6" : 0,
+    "73B206CB37FC25C0F250982F969EE0EA71FAF8F3" : 0,
+    "9BBB6CE5A217212BFA3CAE6DAB7D234BA7F14CD6" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E7B344CD-E1EB-4A59-AD81-23A2CFA376CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "627DF597F5C79C29C5D5555C52576CC0BD24D5F2" : "Carriot\/Carriot\/AndroidStudioProjects\/HelloWorld\/",
+    "4CCEBB648A19C6D07D8E0C889CC7B171CD60C8D6" : "Carriot\/Carriot\/AndroidStudioProjects\/BordesredondosListView\/",
+    "73B206CB37FC25C0F250982F969EE0EA71FAF8F3" : "Carriot\/",
+    "9BBB6CE5A217212BFA3CAE6DAB7D234BA7F14CD6" : "Carriot\/Carriot\/AndroidStudioProjects\/CTP%2520Puriscal\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Carriot",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Carriot.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ccasbre27\/Bordes-redondos-ListView-Android.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4CCEBB648A19C6D07D8E0C889CC7B171CD60C8D6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ccasbre27\/HelloWorld_Android.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "627DF597F5C79C29C5D5555C52576CC0BD24D5F2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/projectsosiris.visualstudio.com\/DefaultCollection\/Zanahoria\/_git\/IOS",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "73B206CB37FC25C0F250982F969EE0EA71FAF8F3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/projectsosiris.visualstudio.com\/DefaultCollection\/_git\/CTP%2520Puriscal",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BBB6CE5A217212BFA3CAE6DAB7D234BA7F14CD6"
+    }
+  ]
+}
