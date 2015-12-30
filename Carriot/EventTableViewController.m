@@ -1,26 +1,26 @@
 //
-//  EventsCategoryTableViewController.m
+//  EventTableViewController.m
 //  Carriot
 //
 //  Created by user on 12/29/15.
 //  Copyright © 2015 user. All rights reserved.
 //
 
-#import "EventsCategoryTableViewController.h"
-#import "OptionTableViewCell.h"
-#import "EventCategory.h"
+#import "EventTableViewController.h"
+#import "EventTableViewCell.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "EventTableViewController.h"
+#import "Event.h"
 
-@interface EventsCategoryTableViewController ()
+@interface EventTableViewController ()
 {
     NSMutableArray *collection;
+    NSDateFormatter *dateFormat;
 }
 @end
 
-@implementation EventsCategoryTableViewController
+@implementation EventTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +29,9 @@
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
     [tableBackgroundView setFrame: self.tableView.frame];
+    
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
     
     [self.tableView setBackgroundView:tableBackgroundView];
     
@@ -52,7 +55,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    MSTable *table = [client tableWithName:@"TipoEvento"];
+    MSTable *table = [client tableWithName:@"Evento"];
     MSQuery *query = [table query];
     [query orderByAscending:@"nombre"];
     
@@ -65,17 +68,17 @@
             {
                 // items is NSArray of records that match query
                 
-                EventCategory *eventCategory = [[EventCategory alloc] init];
+                Event *event = [[Event alloc] init];
                 
                 for (NSString *key in item) {
-                    if ([eventCategory respondsToSelector:NSSelectorFromString(key)]) {
-                        [eventCategory setValue:[item valueForKey:key] forKey:key];
+                    if ([event respondsToSelector:NSSelectorFromString(key)]) {
+                        [event setValue:[item valueForKey:key] forKey:key];
                     }
                 }
                 
                 
                 
-                [collection addObject:eventCategory];
+                [collection addObject:event];
                 
             }
             
@@ -119,21 +122,27 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * cellIdentifier = @"eventCategoryTableViewCell";
+    static NSString * cellIdentifier = @"eventTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    EventTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[OptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    EventCategory  *eventCategory = [collection objectAtIndex:row];
+    Event  *event = [collection objectAtIndex:row];
     
-    [cell.lblTitle setText:eventCategory.nombre];
+    [cell.lblName setText:event.nombre];
     
-    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:eventCategory.urlimagen]
+
+    
+    [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:event.fecha_aux]]];
+    [cell.lblHour setText:[NSString stringWithFormat:@"Hora: %@",event.hora]];
+    [cell.lblAmount setText:[NSString stringWithFormat:@"Costo: %@",event.costo]];
+    
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:event.urlimagen]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
     
@@ -153,9 +162,9 @@
         
         long row = [myIndexPath section];
         
-        EventCategory  *eventCategory = [collection objectAtIndex:row];
+        Event  *event = [collection objectAtIndex:row];
         
-        view.idCategory = eventCategory.id;
+        view.idCategory = event.id;
     }
 }
 
@@ -166,5 +175,6 @@
     [self performSegueWithIdentifier:@"events" sender:self];
     
 }
+
 
 @end
