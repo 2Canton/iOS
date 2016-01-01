@@ -64,43 +64,45 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    MSTable *table = [client tableWithName:@"empresa"];
-    MSQuery *query = [table query];
-    [query orderByAscending:@"nombre"];
+    NSDictionary *parameters = @{ @"idTipoEmpresa": _idCategory };
     
-    
-    [query readWithCompletion:^(MSQueryResult *result, NSError *error) {
-        if(error) { // error is nil if no error occured
-            NSLog(@"ERROR %@", error);
-        } else {
-            for(NSDictionary *item in result.items)
-            {
-                // items is NSArray of records that match query
-                
-                Company *company = [[Company alloc] init];
-                
-                for (NSString *key in item) {
-                    if ([company respondsToSelector:NSSelectorFromString(key)]) {
-                        [company setValue:[item valueForKey:key] forKey:key];
-                    }
-                }
-                
-                
-                
-                [collection addObject:company];
-                
-            }
-            
-            
-            [self.tableView reloadData];
-            
-            
-            
-        }
-        [self.activityIndicator stopAnimating];
-        
-        
-    }];
+    [client invokeAPI:@"companies_category"
+                 body:nil
+           HTTPMethod:@"GET"
+           parameters:parameters
+              headers:nil
+           completion:  ^(NSDictionary *result,
+                          NSHTTPURLResponse *response,
+                          NSError *error){
+               if(error) { // error is nil if no error occured
+                   NSLog(@"ERROR %@", error);
+               } else {
+                   
+                   for(NSDictionary *item in result)
+                   {
+                       
+                       Company *company = [[Company alloc] init];
+                       
+                       for (NSString *key in item) {
+                           if ([company respondsToSelector:NSSelectorFromString(key)]) {
+                               [company setValue:[item valueForKey:key] forKey:key];
+                           }
+                       }
+                       
+                       
+                       [collection addObject:company];
+                       
+                   }
+                   
+                   [self.tableView reloadData];
+                   
+                   
+               }
+               
+               [self.activityIndicator stopAnimating];
+               
+               
+           }];
     
 }
 

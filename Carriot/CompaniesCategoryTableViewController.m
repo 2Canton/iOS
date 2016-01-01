@@ -155,7 +155,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"schedule"])
+    if([[segue identifier] isEqualToString:@"companies"])
     {
         CompaniesTableViewController * view = [segue destinationViewController];
         
