@@ -56,44 +56,45 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
+    NSDictionary *parameters = @{ @"idTipoEvento": _idCategory };
     
-    MSTable *table = [client tableWithName:@"Evento"];
-    MSQuery *query = [table query];
-    [query orderByAscending:@"nombre"];
-    
-    
-    [query readWithCompletion:^(MSQueryResult *result, NSError *error) {
-        if(error) { // error is nil if no error occured
-            NSLog(@"ERROR %@", error);
-        } else {
-            for(NSDictionary *item in result.items)
-            {
-                // items is NSArray of records that match query
-                
-                Event *event = [[Event alloc] init];
-                
-                for (NSString *key in item) {
-                    if ([event respondsToSelector:NSSelectorFromString(key)]) {
-                        [event setValue:[item valueForKey:key] forKey:key];
-                    }
-                }
-                
-                
-                
-                [collection addObject:event];
-                
-            }
-            
-            
-            [self.tableView reloadData];
-            
-            
-            
-        }
-        [self.activityIndicator stopAnimating];
-        
-        
-    }];
+    [client invokeAPI:@"eventscategory"
+                 body:nil
+           HTTPMethod:@"GET"
+           parameters:parameters
+              headers:nil
+           completion:  ^(NSDictionary *result,
+                          NSHTTPURLResponse *response,
+                          NSError *error){
+               if(error) { // error is nil if no error occured
+                   NSLog(@"ERROR %@", error);
+               } else {
+                   
+                   for(NSDictionary *item in result)
+                   {
+                       
+                       Event *event = [[Event alloc] init];
+                       
+                       for (NSString *key in item) {
+                           if ([event respondsToSelector:NSSelectorFromString(key)]) {
+                               [event setValue:[item valueForKey:key] forKey:key];
+                           }
+                       }
+
+                       
+                       [collection addObject:event];
+                       
+                   }
+                   
+                   [self.tableView reloadData];
+                   
+                   
+               }
+               
+               [self.activityIndicator stopAnimating];
+               
+               
+           }];
     
 }
 
