@@ -12,7 +12,6 @@
 		78431BCF1C3317470063749E /* EventCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCE1C3317470063749E /* EventCategory.m */; };
 		78431BD21C3375DE0063749E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD11C3375DE0063749E /* Event.m */; };
 		78431BD51C3376A90063749E /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD41C3376A90063749E /* EventTableViewCell.m */; };
-		78431BD81C33781F0063749E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD71C33781F0063749E /* EventTableViewController.m */; };
 		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
 		78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1F01C371B81001CB717 /* EventsViewController.m */; };
@@ -100,8 +99,6 @@
 		78431BD11C3375DE0063749E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		78431BD31C3376A90063749E /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		78431BD41C3376A90063749E /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
-		78431BD61C33781F0063749E /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
-		78431BD71C33781F0063749E /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		78B0D1EF1C371B81001CB717 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -317,8 +314,6 @@
 				78B3235C1C31B1E60031A315 /* CompaniesTableViewController.m */,
 				78431BCA1C33165F0063749E /* EventsCategoryTableViewController.h */,
 				78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */,
-				78431BD61C33781F0063749E /* EventTableViewController.h */,
-				78431BD71C33781F0063749E /* EventTableViewController.m */,
 				78314BA31C364BDD00F882C0 /* EventDetailViewController.h */,
 				78314BA41C364BDD00F882C0 /* EventDetailViewController.m */,
 				78B0D1EF1C371B81001CB717 /* EventsViewController.h */,
@@ -636,7 +631,6 @@
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,
 				78B282A41C30D37200EA579A /* Route.m in Sources */,
 				78B282AA1C30D75400EA579A /* ScheduleTableViewController.m in Sources */,
-				78431BD81C33781F0063749E /* EventTableViewController.m in Sources */,
 				78431BD51C3376A90063749E /* EventTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

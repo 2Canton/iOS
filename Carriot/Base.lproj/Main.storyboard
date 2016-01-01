@@ -807,8 +807,8 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="186" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M1N-az-wCi">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.39660560340000001" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventTableViewCell" rowHeight="186" id="hxT-f9-yzB" customClass="EventTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="186"/>
@@ -850,7 +850,6 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LT-8t-us9">
                                                     <rect key="frame" x="161" y="134" width="431" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="431" id="HkT-VW-pCq"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="oJM-oK-ZCz"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -869,32 +868,30 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                                 <constraint firstItem="2An-oJ-z6G" firstAttribute="trailing" secondItem="gjm-EU-FQd" secondAttribute="trailingMargin" id="1Qo-F9-wuY"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="arg-R3-Nr4" secondAttribute="bottom" constant="22" id="79l-gd-4fu"/>
                                                 <constraint firstItem="tEN-0c-Wpv" firstAttribute="top" secondItem="yPb-hp-lNv" secondAttribute="bottom" constant="24" id="7sX-ed-SXY"/>
-                                                <constraint firstItem="5LT-8t-us9" firstAttribute="leading" secondItem="arg-R3-Nr4" secondAttribute="trailing" constant="8" id="Ao0-XC-dlk"/>
                                                 <constraint firstItem="yPb-hp-lNv" firstAttribute="top" secondItem="2An-oJ-z6G" secondAttribute="bottom" constant="8" id="BnH-ob-tT7"/>
                                                 <constraint firstItem="tEN-0c-Wpv" firstAttribute="top" secondItem="yPb-hp-lNv" secondAttribute="bottom" constant="24" id="CW2-nw-G2c"/>
+                                                <constraint firstItem="5LT-8t-us9" firstAttribute="trailing" secondItem="gjm-EU-FQd" secondAttribute="trailingMargin" id="EJ0-9q-ooE"/>
                                                 <constraint firstItem="yPb-hp-lNv" firstAttribute="top" secondItem="2An-oJ-z6G" secondAttribute="bottom" constant="8" id="L29-k6-P92"/>
                                                 <constraint firstItem="2An-oJ-z6G" firstAttribute="leading" secondItem="gjm-EU-FQd" secondAttribute="leadingMargin" id="QiW-Sp-gLz"/>
+                                                <constraint firstItem="5LT-8t-us9" firstAttribute="leading" secondItem="arg-R3-Nr4" secondAttribute="trailing" constant="8" id="Sle-v4-VgG"/>
+                                                <constraint firstItem="5LT-8t-us9" firstAttribute="top" secondItem="tEN-0c-Wpv" secondAttribute="bottom" constant="24" id="Wl7-hv-Zno"/>
                                                 <constraint firstItem="arg-R3-Nr4" firstAttribute="leading" secondItem="gjm-EU-FQd" secondAttribute="leadingMargin" constant="14" id="ZgZ-6r-WiV"/>
                                                 <constraint firstItem="arg-R3-Nr4" firstAttribute="top" secondItem="2An-oJ-z6G" secondAttribute="bottom" constant="8" id="dWH-9M-UM5"/>
                                                 <constraint firstItem="yPb-hp-lNv" firstAttribute="trailing" secondItem="gjm-EU-FQd" secondAttribute="trailingMargin" id="dZ5-Nh-ook"/>
                                                 <constraint firstItem="tEN-0c-Wpv" firstAttribute="leading" secondItem="arg-R3-Nr4" secondAttribute="trailing" constant="8" id="eaE-TZ-HOX"/>
-                                                <constraint firstItem="5LT-8t-us9" firstAttribute="top" secondItem="tEN-0c-Wpv" secondAttribute="bottom" constant="24" id="gRQ-xl-f92"/>
-                                                <constraint firstItem="5LT-8t-us9" firstAttribute="trailing" secondItem="gjm-EU-FQd" secondAttribute="trailingMargin" id="h62-Ue-Jh9"/>
-                                                <constraint firstItem="5LT-8t-us9" firstAttribute="top" secondItem="tEN-0c-Wpv" secondAttribute="bottom" constant="24" id="inv-ck-qef"/>
                                                 <constraint firstItem="2An-oJ-z6G" firstAttribute="top" secondItem="gjm-EU-FQd" secondAttribute="topMargin" constant="7" id="j8J-UF-woW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="5LT-8t-us9" secondAttribute="bottom" constant="22" id="jYR-BH-rmr"/>
                                                 <constraint firstItem="tEN-0c-Wpv" firstAttribute="trailing" secondItem="gjm-EU-FQd" secondAttribute="trailingMargin" id="lWG-d6-kuX"/>
-                                                <constraint firstItem="5LT-8t-us9" firstAttribute="leading" secondItem="arg-R3-Nr4" secondAttribute="trailing" constant="8" id="nR1-Ab-B4I"/>
                                                 <constraint firstItem="yPb-hp-lNv" firstAttribute="leading" secondItem="arg-R3-Nr4" secondAttribute="trailing" constant="8" id="pF1-oJ-elr"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.39660560340000001" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60264008619999998" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="imgLogo" destination="arg-R3-Nr4" id="LwT-Xv-fz8"/>
                                             <outlet property="lblAmount" destination="5LT-8t-us9" id="27P-In-TfQ"/>
                                             <outlet property="lblDate" destination="yPb-hp-lNv" id="3cx-8D-Wdb"/>
                                             <outlet property="lblHour" destination="tEN-0c-Wpv" id="XQt-z9-tvJ"/>
                                             <outlet property="lblName" destination="2An-oJ-z6G" id="44H-Qf-E7c"/>
+                                            <segue destination="LWn-xx-QrS" kind="show" identifier="eventDetail" id="yaf-Wq-kSl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -969,13 +966,13 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                 <color key="color" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.39660560340000001" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gah-Kx-xK1" firstAttribute="leading" secondItem="LqO-hr-Xww" secondAttribute="leadingMargin" id="1M2-xK-GRR"/>
                             <constraint firstItem="gah-Kx-xK1" firstAttribute="leading" secondItem="LqO-hr-Xww" secondAttribute="leading" id="1hT-Qz-lWB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gah-Kx-xK1" secondAttribute="trailing" id="2YM-9O-8Av"/>
                             <constraint firstAttribute="trailing" secondItem="gah-Kx-xK1" secondAttribute="trailing" id="72X-YV-LwF"/>
-                            <constraint firstItem="M1N-az-wCi" firstAttribute="top" secondItem="gah-Kx-xK1" secondAttribute="top" id="DWr-cL-ycE"/>
+                            <constraint firstItem="M1N-az-wCi" firstAttribute="top" secondItem="gah-Kx-xK1" secondAttribute="top" constant="8" id="DWr-cL-ycE"/>
                             <constraint firstItem="M1N-az-wCi" firstAttribute="leading" secondItem="gah-Kx-xK1" secondAttribute="leading" id="Eub-TB-a5K"/>
                             <constraint firstItem="M1N-az-wCi" firstAttribute="leading" secondItem="LqO-hr-Xww" secondAttribute="leading" id="Fcl-jO-ZfT"/>
                             <constraint firstItem="viR-Qi-1fY" firstAttribute="leading" secondItem="gah-Kx-xK1" secondAttribute="leading" id="GYt-3I-oYG"/>
@@ -1019,7 +1016,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpa-a5-M3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-107" y="1982"/>
+            <point key="canvasLocation" x="617" y="2006"/>
         </scene>
         <!--Events Category-->
         <scene sceneID="NS3-Gl-nZp">
@@ -1098,18 +1095,6 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cC6-Nd-Uje" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="617" y="1203"/>
-        </scene>
-        <!--Event Table View Controller-->
-        <scene sceneID="P65-wq-in3">
-            <objects>
-                <tableViewController id="3qP-RH-pQK" customClass="EventTableViewController" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="LWn-xx-QrS" kind="show" identifier="eventDetail" id="s9a-dZ-p2J"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wm4-DP-BK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="617" y="1944"/>
         </scene>
     </scenes>
     <resources>

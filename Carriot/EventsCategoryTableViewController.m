@@ -12,7 +12,6 @@
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "EventTableViewController.h"
 #import "EventsViewController.h"
 
 
