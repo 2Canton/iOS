@@ -153,43 +153,7 @@
     
     // Here we use the new provided sd_setImageWithURL: method to load the web image
     [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:company.urlimagen]
-                      placeholderImage:[UIImage imageNamed:@"picture.png"]];
-
-
-    /*
-    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: company.urlimagen]];
-    
-    [cell.imgLogo setImage:[UIImage imageWithData: imageData]];
-    */
-   
-    /*
-    // se carga la imagen
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        NSData * imgData = [NSData dataWithContentsOfURL:[NSURL URLWithString:company.urlimagen]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            if (imgData)
-            {
-                UIImage *image = [UIImage imageWithData:imgData];
-                
-                if (image) {
-                    [cell.imgLogo setImage:image];
-                }
-                else
-                {
-                    [cell.imgLogo setImage:[UIImage imageNamed:@"picture_removed.png"]];
-                }
-            }
-            
-        });
-        
-    });
-    
-    */
-    
-    
+                      placeholderImage:[UIImage imageNamed:@"picture.png"]];    
     
     [cell.layer setCornerRadius:35.0f];
     

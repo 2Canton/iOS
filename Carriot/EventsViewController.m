@@ -1,64 +1,58 @@
 //
-//  EventsCategoryTableViewController.m
+//  EventsViewController.m
 //  Carriot
 //
-//  Created by user on 12/29/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/1/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "EventsCategoryTableViewController.h"
-#import "OptionTableViewCell.h"
-#import "EventCategory.h"
-#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
-#import "AppDelegate.h"
-#import <SDWebImage/UIImageView+WebCache.h>
-#import "EventTableViewController.h"
 #import "EventsViewController.h"
+#import "AppDelegate.h"
+#import "EventTableViewCell.h"
+#import "Event.h"
+#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "EventDetailViewController.h"
 
-
-
-@interface EventsCategoryTableViewController ()
+@interface EventsViewController ()
 {
     NSMutableArray *collection;
+    NSDateFormatter *dateFormat;
 }
 @end
 
-@implementation EventsCategoryTableViewController
+@implementation EventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // se establece la imagen de fondo
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
-    UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-    [tableBackgroundView setFrame: self.tableView.frame];
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
     
-    [self.tableView setBackgroundView:tableBackgroundView];
+
+    [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
     
     [self loadData];
-    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 - (void) loadData
 {
     collection = [[NSMutableArray alloc] init];
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    [client invokeAPI:@"events"
+    NSDictionary *parameters = @{ @"idTipoEvento": _idCategory };
+    
+    [client invokeAPI:@"eventscategory"
                  body:nil
            HTTPMethod:@"GET"
-           parameters:nil
+           parameters:parameters
               headers:nil
            completion:  ^(NSDictionary *result,
                           NSHTTPURLResponse *response,
@@ -70,26 +64,33 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       EventCategory *eventCategory = [[EventCategory alloc] init];
+                       Event *event = [[Event alloc] init];
                        
                        for (NSString *key in item) {
-                           if ([eventCategory respondsToSelector:NSSelectorFromString(key)]) {
-                               [eventCategory setValue:[item valueForKey:key] forKey:key];
+                           if ([event respondsToSelector:NSSelectorFromString(key)]) {
+                               [event setValue:[item valueForKey:key] forKey:key];
                            }
                        }
                        
                        
-                       
-                       [collection addObject:eventCategory];
+                       [collection addObject:event];
                        
                    }
                    
                    [self.tableView reloadData];
                    
-                   
                }
                
                [self.activityIndicator stopAnimating];
+               
+               if (collection.count == 0) {
+                   [self.errorView setHidden:NO];
+               }
+               else
+               {
+                   [self.errorView setHidden:YES];
+               }
+               
                
                
            }];
@@ -123,23 +124,27 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * cellIdentifier = @"eventCategoryTableViewCell";
+    static NSString * cellIdentifier = @"eventTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    EventTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[OptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    EventCategory  *eventCategory = [collection objectAtIndex:row];
+    Event  *event = [collection objectAtIndex:row];
     
-    [cell.lblTitle setText:eventCategory.nombre];
+    [cell.lblName setText:event.nombre];
     
-    [cell.lblSubtitle setText:[NSString stringWithFormat:@"Cantidad: %@",eventCategory.cantidad_eventos]];
     
-    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:eventCategory.urlimagen]
+    
+    [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:event.fecha_aux]]];
+    [cell.lblHour setText:[NSString stringWithFormat:@"Hora: %@",event.hora]];
+    [cell.lblAmount setText:[NSString stringWithFormat:@"Costo: %@",event.costo]];
+    
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:event.urlimagen]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
     
@@ -151,19 +156,17 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"events"])
+    if([[segue identifier] isEqualToString:@"eventDetail"])
     {
-        //EventTableViewController * view = [segue destinationViewController];
-        
-        EventsViewController * view = [segue destinationViewController];
+        EventDetailViewController * view = [segue destinationViewController];
         
         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
         
         long row = [myIndexPath section];
         
-        EventCategory  *eventCategory = [collection objectAtIndex:row];
+        Event  *event = [collection objectAtIndex:row];
         
-        view.idCategory = eventCategory.id;
+        view.event = event;
     }
 }
 
@@ -171,8 +174,9 @@
 {
     
     // mostramos el segue
-    [self performSegueWithIdentifier:@"events" sender:self];
+    [self performSegueWithIdentifier:@"eventDetail" sender:self];
     
 }
+
 
 @end

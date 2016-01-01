@@ -15,6 +15,7 @@
 		78431BD81C33781F0063749E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD71C33781F0063749E /* EventTableViewController.m */; };
 		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
+		78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1F01C371B81001CB717 /* EventsViewController.m */; };
 		78B282961C3086C300EA579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B282941C3086C300EA579A /* Main.storyboard */; };
 		78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B2829E1C308A5100EA579A /* RouteTableViewController.m */; };
 		78B282A41C30D37200EA579A /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A31C30D37200EA579A /* Route.m */; };
@@ -103,6 +104,8 @@
 		78431BD71C33781F0063749E /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
 		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
+		78B0D1EF1C371B81001CB717 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		78B0D1F01C371B81001CB717 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		78B282951C3086C300EA579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78B2829D1C308A5100EA579A /* RouteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTableViewController.h; sourceTree = "<group>"; };
 		78B2829E1C308A5100EA579A /* RouteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTableViewController.m; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 				78431BD71C33781F0063749E /* EventTableViewController.m */,
 				78314BA31C364BDD00F882C0 /* EventDetailViewController.h */,
 				78314BA41C364BDD00F882C0 /* EventDetailViewController.m */,
+				78B0D1EF1C371B81001CB717 /* EventsViewController.h */,
+				78B0D1F01C371B81001CB717 /* EventsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -622,6 +627,7 @@
 				78B282C91C30FE7200EA579A /* HourDescriptionTableViewCell.m in Sources */,
 				78B323531C31A7540031A315 /* CompaniesCategory.m in Sources */,
 				78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */,
+				78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */,
 				78431BD21C3375DE0063749E /* Event.m in Sources */,
 				78B3235D1C31B1E60031A315 /* CompaniesTableViewController.m in Sources */,
 				78431BCC1C33165F0063749E /* EventsCategoryTableViewController.m in Sources */,
