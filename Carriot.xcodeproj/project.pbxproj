@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78314BA41C364BDD00F882C0 /* EventDetailViewController.m */; };
 		78431BCC1C33165F0063749E /* EventsCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */; };
 		78431BCF1C3317470063749E /* EventCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCE1C3317470063749E /* EventCategory.m */; };
 		78431BD21C3375DE0063749E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD11C3375DE0063749E /* Event.m */; };
@@ -88,6 +89,8 @@
 /* Begin PBXFileReference section */
 		246B99EA850D8FB1C687AA5B /* libPods-Carriot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Carriot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7608EB67B65F5B215D906185 /* Pods-Carriot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carriot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carriot/Pods-Carriot.debug.xcconfig"; sourceTree = "<group>"; };
+		78314BA31C364BDD00F882C0 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
+		78314BA41C364BDD00F882C0 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
 		78431BCA1C33165F0063749E /* EventsCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCategoryTableViewController.h; sourceTree = "<group>"; };
 		78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCategoryTableViewController.m; sourceTree = "<group>"; };
 		78431BCD1C3317470063749E /* EventCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCategory.h; sourceTree = "<group>"; };
@@ -203,6 +206,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78314B9F1C36468F00F882C0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		78BAFBAC1C2F454500FEF250 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +238,7 @@
 		78BAFBB71C2F454500FEF250 /* Carriot */ = {
 			isa = PBXGroup;
 			children = (
+				78314B9F1C36468F00F882C0 /* Helper */,
 				78B282A01C308AA700EA579A /* WindowsAzureMobileServices.framework */,
 				78BAFBF61C2F476300FEF250 /* img */,
 				78EAE3651C2FAFE800EC494D /* Model */,
@@ -305,6 +316,8 @@
 				78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */,
 				78431BD61C33781F0063749E /* EventTableViewController.h */,
 				78431BD71C33781F0063749E /* EventTableViewController.m */,
+				78314BA31C364BDD00F882C0 /* EventDetailViewController.h */,
+				78314BA41C364BDD00F882C0 /* EventDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -602,6 +615,7 @@
 				78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */,
 				78B282C61C30FA6200EA579A /* RoutePathTableViewController.m in Sources */,
 				78B282A71C30D6EC00EA579A /* Schedule.m in Sources */,
+				78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */,
 				78B323631C31B3A70031A315 /* CompanyTableViewCell.m in Sources */,
 				78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */,
 				78EAE3681C2FAFF600EC494D /* Option.m in Sources */,

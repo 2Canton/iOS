@@ -185,13 +185,13 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.38392171263694763" green="0.3693995475769043" blue="0.28026580810546875" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.019945688046007475" green="0.019565122193847821" blue="0.31039667129516602" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tgy-jk-qeJ" firstAttribute="leading" secondItem="mdp-Jp-urd" secondAttribute="leading" id="2Nx-1l-tAs"/>
                             <constraint firstItem="uZR-qv-0Jr" firstAttribute="leading" secondItem="tgy-jk-qeJ" secondAttribute="leading" id="7G9-Sz-rnH"/>
+                            <constraint firstItem="tgy-jk-qeJ" firstAttribute="bottom" secondItem="vML-Iw-Fic" secondAttribute="top" id="9jL-JY-MYa"/>
                             <constraint firstItem="uZR-qv-0Jr" firstAttribute="bottom" secondItem="tgy-jk-qeJ" secondAttribute="bottom" id="NAf-1j-VNS"/>
                             <constraint firstItem="uZR-qv-0Jr" firstAttribute="height" secondItem="mdp-Jp-urd" secondAttribute="height" id="NBy-FQ-fRE"/>
-                            <constraint firstItem="tgy-jk-qeJ" firstAttribute="bottom" secondItem="vML-Iw-Fic" secondAttribute="top" id="OdI-Zs-PJC"/>
                             <constraint firstItem="uZR-qv-0Jr" firstAttribute="top" secondItem="tgy-jk-qeJ" secondAttribute="top" id="dan-Aw-osZ"/>
                             <constraint firstItem="uZR-qv-0Jr" firstAttribute="trailing" secondItem="tgy-jk-qeJ" secondAttribute="trailing" id="mTx-8a-m88"/>
                             <constraint firstItem="uZR-qv-0Jr" firstAttribute="width" secondItem="mdp-Jp-urd" secondAttribute="width" id="yaq-Vv-aM9"/>
@@ -466,6 +466,45 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ned-We-YJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1477" y="1195"/>
+        </scene>
+        <!--Event Detail View Controller-->
+        <scene sceneID="AUi-OS-6Bm">
+            <objects>
+                <viewController id="LWn-xx-QrS" customClass="EventDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VSz-Hh-dr3"/>
+                        <viewControllerLayoutGuide type="bottom" id="G3Q-ju-2LN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KXC-rw-0yt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iglesia.png" translatesAutoresizingMaskIntoConstraints="NO" id="JX1-XC-nwr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JX1-XC-nwr" firstAttribute="leading" secondItem="KXC-rw-0yt" secondAttribute="leadingMargin" id="HWf-bt-TPs"/>
+                            <constraint firstItem="JX1-XC-nwr" firstAttribute="bottom" secondItem="G3Q-ju-2LN" secondAttribute="top" id="IhD-O1-RDR"/>
+                            <constraint firstItem="JX1-XC-nwr" firstAttribute="leading" secondItem="KXC-rw-0yt" secondAttribute="leading" id="LOu-HN-TtW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JX1-XC-nwr" secondAttribute="trailing" id="LeS-Al-pzS"/>
+                            <constraint firstItem="JX1-XC-nwr" firstAttribute="width" secondItem="KXC-rw-0yt" secondAttribute="width" id="UFA-VB-Ufu"/>
+                            <constraint firstItem="JX1-XC-nwr" firstAttribute="height" secondItem="KXC-rw-0yt" secondAttribute="height" id="YyL-ua-4xn"/>
+                            <constraint firstAttribute="trailing" secondItem="JX1-XC-nwr" secondAttribute="trailing" id="qlh-fj-anp"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HWf-bt-TPs"/>
+                                <exclude reference="LeS-Al-pzS"/>
+                                <exclude reference="UFA-VB-Ufu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Edk-Fq-XJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1489" y="1944"/>
         </scene>
         <!--Companies Table View Controller-->
         <scene sceneID="SaT-hO-qOa">
@@ -818,6 +857,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                     </tableView>
                     <connections>
                         <outlet property="activityIndicator" destination="LEh-P7-RwO" id="J17-Wc-mTN"/>
+                        <segue destination="LWn-xx-QrS" kind="show" identifier="eventDetail" id="s9a-dZ-p2J"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wm4-DP-BK1" userLabel="First Responder" sceneMemberID="firstResponder"/>

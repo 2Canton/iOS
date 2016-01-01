@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "Event.h"
+#import "EventDetailViewController.h"
 
 @interface EventTableViewController ()
 {
@@ -154,9 +155,9 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"events"])
+    if([[segue identifier] isEqualToString:@"eventDetail"])
     {
-        EventTableViewController * view = [segue destinationViewController];
+        EventDetailViewController * view = [segue destinationViewController];
         
         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
         
@@ -164,7 +165,7 @@
         
         Event  *event = [collection objectAtIndex:row];
         
-        view.idCategory = event.id;
+        view.event = event;
     }
 }
 
@@ -172,7 +173,7 @@
 {
     
     // mostramos el segue
-    [self performSegueWithIdentifier:@"events" sender:self];
+    [self performSegueWithIdentifier:@"eventDetail" sender:self];
     
 }
 
