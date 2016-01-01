@@ -12,5 +12,13 @@
 @interface EventDetailViewController : UIViewController
 
 @property (strong,nonatomic) Event * event;
+@property (weak, nonatomic) IBOutlet UILabel *lblName;
+@property (weak, nonatomic) IBOutlet UIImageView *imgBanner;
+@property (weak, nonatomic) IBOutlet UILabel *lblDate;
+@property (weak, nonatomic) IBOutlet UILabel *lblHour;
+@property (weak, nonatomic) IBOutlet UILabel *lblAmount;
+@property (weak, nonatomic) IBOutlet UILabel *lblDescription;
+
+
 
 @end

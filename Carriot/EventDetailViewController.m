@@ -7,9 +7,12 @@
 //
 
 #import "EventDetailViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface EventDetailViewController ()
-
+{
+    NSDateFormatter *dateFormat;
+}
 @end
 
 @implementation EventDetailViewController
@@ -18,6 +21,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
+    
+    [self.lblName setText: _event.nombre];
+    
+    [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:_event.urlimagen]
+                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+    
+    [self.lblDate setText: [NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:_event.fecha_aux]]];
+    [self.lblHour setText: [NSString stringWithFormat:@"Hora: %@",_event.hora]];
+    [self.lblAmount setText: _event.costo];
+    [self.lblDescription setText: _event.descripcion];
 
     
 }
