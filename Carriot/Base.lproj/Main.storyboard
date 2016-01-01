@@ -719,9 +719,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="LEh-P7-RwO">
+                        <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="LEh-P7-RwO">
                             <rect key="frame" x="0.0" y="301" width="600" height="20"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventTableViewCell" rowHeight="209" id="e7a-ld-Ang" customClass="EventTableViewCell">
@@ -731,26 +732,48 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="208"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-Ff-2Zf">
-                                            <rect key="frame" x="8" y="17" width="584" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h31-G7-mRQ">
+                                            <rect key="frame" x="168" y="71" width="424" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Costo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIL-m2-nXT">
+                                            <rect key="frame" x="168" y="171" width="424" height="23"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="afq-aJ-uEn"/>
+                                                <constraint firstAttribute="height" constant="23" id="i9C-cX-LYZ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h31-G7-mRQ">
-                                            <rect key="frame" x="168" y="100" width="424" height="41"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-2Y-jpH">
+                                            <rect key="frame" x="29" y="67" width="125" height="127"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="41" id="jDs-Hs-kiX"/>
+                                                <constraint firstAttribute="height" constant="125" id="2gL-sM-rqb"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="127" id="8Fe-bh-abI"/>
+                                                <constraint firstAttribute="width" constant="125" id="Bgd-PM-2Ne"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="g3Z-VV-hcd"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2gL-sM-rqb"/>
+                                                    <exclude reference="8Fe-bh-abI"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1r-4i-DWP">
+                                            <rect key="frame" x="8" y="29" width="584" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="584" id="6bL-1e-iH1"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="Gew-Hq-pCQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Fecha" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9up-km-Zfq">
-                                            <rect key="frame" x="168" y="48" width="424" height="40"/>
+                                            <rect key="frame" x="168" y="110" width="424" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="LFB-t7-JF1"/>
                                             </constraints>
@@ -758,40 +781,23 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsi-2Y-jpH">
-                                            <rect key="frame" x="29" y="48" width="125" height="125"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="125" id="2gL-sM-rqb"/>
-                                                <constraint firstAttribute="width" constant="125" id="Bgd-PM-2Ne"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Costo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIL-m2-nXT">
-                                            <rect key="frame" x="168" y="152" width="424" height="42"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="42" id="i9C-cX-LYZ"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="zK4-Ff-2Zf" firstAttribute="leading" secondItem="zZk-aN-h9K" secondAttribute="leadingMargin" id="30k-sU-Ghd"/>
-                                        <constraint firstItem="9up-km-Zfq" firstAttribute="trailing" secondItem="zZk-aN-h9K" secondAttribute="trailingMargin" id="5NN-1n-ghg"/>
-                                        <constraint firstItem="9up-km-Zfq" firstAttribute="top" secondItem="zK4-Ff-2Zf" secondAttribute="bottom" constant="10" id="7Lz-Dq-g1B"/>
-                                        <constraint firstItem="vsi-2Y-jpH" firstAttribute="top" secondItem="zK4-Ff-2Zf" secondAttribute="bottom" constant="10" id="VbO-ou-YPS"/>
-                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="leading" secondItem="9up-km-Zfq" secondAttribute="leading" id="Zbu-MF-aY7"/>
-                                        <constraint firstItem="9up-km-Zfq" firstAttribute="leading" secondItem="vsi-2Y-jpH" secondAttribute="trailing" constant="14" id="aQm-sR-4wy"/>
-                                        <constraint firstItem="zK4-Ff-2Zf" firstAttribute="top" secondItem="zZk-aN-h9K" secondAttribute="topMargin" constant="9" id="alH-kk-q1W"/>
-                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="leading" secondItem="MIL-m2-nXT" secondAttribute="leading" id="cNC-KI-dsF"/>
-                                        <constraint firstItem="MIL-m2-nXT" firstAttribute="top" secondItem="h31-G7-mRQ" secondAttribute="bottom" constant="11" id="dCl-yI-vtg"/>
-                                        <constraint firstItem="vsi-2Y-jpH" firstAttribute="top" secondItem="zK4-Ff-2Zf" secondAttribute="bottom" constant="10" id="ePB-Y5-ri9"/>
-                                        <constraint firstItem="vsi-2Y-jpH" firstAttribute="leading" secondItem="zZk-aN-h9K" secondAttribute="leadingMargin" constant="21" id="hV1-qS-hTa"/>
-                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="trailing" secondItem="9up-km-Zfq" secondAttribute="trailing" id="jVh-ef-p7U"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="vsi-2Y-jpH" secondAttribute="bottom" constant="27" id="nBY-Q9-Zwj"/>
-                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="trailing" secondItem="MIL-m2-nXT" secondAttribute="trailing" id="ngV-zU-jKq"/>
-                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="top" secondItem="9up-km-Zfq" secondAttribute="bottom" constant="12" id="x9e-ls-J4I"/>
-                                        <constraint firstItem="zK4-Ff-2Zf" firstAttribute="trailing" secondItem="zZk-aN-h9K" secondAttribute="trailingMargin" id="xqD-b4-dRl"/>
+                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="top" secondItem="E1r-4i-DWP" secondAttribute="bottom" constant="18" id="5x6-kg-hOd"/>
+                                        <constraint firstAttribute="trailing" secondItem="E1r-4i-DWP" secondAttribute="trailing" constant="8" id="9rz-Lf-ikO"/>
+                                        <constraint firstItem="vsi-2Y-jpH" firstAttribute="top" secondItem="E1r-4i-DWP" secondAttribute="bottom" constant="14" id="Abi-no-ogF"/>
+                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="trailing" secondItem="9up-km-Zfq" secondAttribute="trailing" id="G2c-5I-5fI"/>
+                                        <constraint firstItem="9up-km-Zfq" firstAttribute="leading" secondItem="vsi-2Y-jpH" secondAttribute="trailing" constant="14" id="QUA-aD-ihE"/>
+                                        <constraint firstItem="vsi-2Y-jpH" firstAttribute="leading" secondItem="zZk-aN-h9K" secondAttribute="leadingMargin" constant="21" id="TmU-Yz-OfX"/>
+                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="leading" secondItem="9up-km-Zfq" secondAttribute="leading" id="U6A-I0-2K2"/>
+                                        <constraint firstItem="MIL-m2-nXT" firstAttribute="leading" secondItem="vsi-2Y-jpH" secondAttribute="trailing" constant="14" id="cSA-Ip-X4h"/>
+                                        <constraint firstItem="E1r-4i-DWP" firstAttribute="trailing" secondItem="9up-km-Zfq" secondAttribute="trailing" id="jHA-5z-h3W"/>
+                                        <constraint firstItem="h31-G7-mRQ" firstAttribute="trailing" secondItem="MIL-m2-nXT" secondAttribute="trailing" id="lVR-V9-tMz"/>
+                                        <constraint firstItem="vsi-2Y-jpH" firstAttribute="bottom" secondItem="MIL-m2-nXT" secondAttribute="bottom" id="nHK-PN-hN5"/>
+                                        <constraint firstItem="9up-km-Zfq" firstAttribute="top" secondItem="E1r-4i-DWP" secondAttribute="bottom" constant="57" id="o3J-0U-gpK"/>
+                                        <constraint firstItem="E1r-4i-DWP" firstAttribute="leading" secondItem="zZk-aN-h9K" secondAttribute="leading" constant="8" id="qWS-Jf-RsH"/>
+                                        <constraint firstItem="9up-km-Zfq" firstAttribute="trailing" secondItem="zZk-aN-h9K" secondAttribute="trailingMargin" id="qzU-qL-VFt"/>
+                                        <constraint firstItem="E1r-4i-DWP" firstAttribute="top" secondItem="zZk-aN-h9K" secondAttribute="top" constant="29" id="vSX-04-E2l"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="MIL-m2-nXT" secondAttribute="bottom" constant="6" id="zGu-82-Blj"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -801,7 +807,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                     <outlet property="lblAmount" destination="MIL-m2-nXT" id="O3U-PD-nBl"/>
                                     <outlet property="lblDate" destination="9up-km-Zfq" id="WGv-38-gSB"/>
                                     <outlet property="lblHour" destination="h31-G7-mRQ" id="Z0o-Dx-5zj"/>
-                                    <outlet property="lblName" destination="zK4-Ff-2Zf" id="ocB-ad-uzu"/>
+                                    <outlet property="lblName" destination="E1r-4i-DWP" id="fdP-aq-CLy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -810,6 +816,9 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                             <outlet property="delegate" destination="3qP-RH-pQK" id="n7n-BZ-fa0"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LEh-P7-RwO" id="J17-Wc-mTN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wm4-DP-BK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
