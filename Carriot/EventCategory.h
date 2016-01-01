@@ -13,5 +13,6 @@
 @property (nonatomic, retain) NSString *id;
 @property (nonatomic, retain) NSString *nombre;
 @property (nonatomic, retain) NSString *urlimagen;
+@property (nonatomic, retain) NSNumber * cantidad_eventos;
 
 @end

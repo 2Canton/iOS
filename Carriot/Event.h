@@ -20,4 +20,5 @@
 @property (nonatomic, retain) NSString * urlimagen;
 @property (nonatomic, retain) NSDate * fecha_aux;
 
+
 @end

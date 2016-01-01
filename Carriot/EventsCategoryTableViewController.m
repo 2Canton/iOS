@@ -14,6 +14,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "EventTableViewController.h"
 
+
 @interface EventsCategoryTableViewController ()
 {
     NSMutableArray *collection;
@@ -52,43 +53,44 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    MSTable *table = [client tableWithName:@"TipoEvento"];
-    MSQuery *query = [table query];
-    [query orderByAscending:@"nombre"];
-    
-    
-    [query readWithCompletion:^(MSQueryResult *result, NSError *error) {
-        if(error) { // error is nil if no error occured
-            NSLog(@"ERROR %@", error);
-        } else {
-            for(NSDictionary *item in result.items)
-            {
-                // items is NSArray of records that match query
-                
-                EventCategory *eventCategory = [[EventCategory alloc] init];
-                
-                for (NSString *key in item) {
-                    if ([eventCategory respondsToSelector:NSSelectorFromString(key)]) {
-                        [eventCategory setValue:[item valueForKey:key] forKey:key];
-                    }
-                }
-                
-                
-                
-                [collection addObject:eventCategory];
-                
-            }
-            
-            
-            [self.tableView reloadData];
-            
-            
-            
-        }
-        [self.activityIndicator stopAnimating];
-        
-        
-    }];
+    [client invokeAPI:@"events"
+                 body:nil
+           HTTPMethod:@"GET"
+           parameters:nil
+              headers:nil
+           completion:  ^(NSDictionary *result,
+                          NSHTTPURLResponse *response,
+                          NSError *error){
+               if(error) { // error is nil if no error occured
+                   NSLog(@"ERROR %@", error);
+               } else {
+                   
+                   for(NSDictionary *item in result)
+                   {
+                       
+                       EventCategory *eventCategory = [[EventCategory alloc] init];
+                       
+                       for (NSString *key in item) {
+                           if ([eventCategory respondsToSelector:NSSelectorFromString(key)]) {
+                               [eventCategory setValue:[item valueForKey:key] forKey:key];
+                           }
+                       }
+                       
+                       
+                       
+                       [collection addObject:eventCategory];
+                       
+                   }
+                   
+                   [self.tableView reloadData];
+                   
+                   
+               }
+               
+               [self.activityIndicator stopAnimating];
+               
+               
+           }];
     
 }
 
@@ -132,6 +134,8 @@
     EventCategory  *eventCategory = [collection objectAtIndex:row];
     
     [cell.lblTitle setText:eventCategory.nombre];
+    
+    [cell.lblSubtitle setText:[NSString stringWithFormat:@"Cantidad: %@",eventCategory.cantidad_eventos]];
     
     [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:eventCategory.urlimagen]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];

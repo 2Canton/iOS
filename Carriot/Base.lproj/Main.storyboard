@@ -820,7 +820,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9t-vJ-6ld">
-                                            <rect key="frame" x="197" y="34" width="386" height="104"/>
+                                            <rect key="frame" x="197" y="34" width="386" height="75"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="6jS-GP-GBi"/>
                                             </constraints>
@@ -828,9 +828,15 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQX-Px-wDD">
+                                            <rect key="frame" x="197" y="117" width="386" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="F9t-vJ-6ld" secondAttribute="bottom" constant="26" id="6pe-f3-sNY"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="F9t-vJ-6ld" secondAttribute="bottom" constant="55" id="6pe-f3-sNY"/>
                                         <constraint firstItem="iWh-kr-BQA" firstAttribute="top" secondItem="J4H-Sj-Q0w" secondAttribute="topMargin" constant="26" id="Fp7-03-7F8"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="F9t-vJ-6ld" secondAttribute="trailing" constant="9" id="QDi-hY-9qx"/>
                                         <constraint firstItem="F9t-vJ-6ld" firstAttribute="leading" secondItem="iWh-kr-BQA" secondAttribute="trailing" constant="8" id="R1Q-VY-F52"/>
@@ -843,6 +849,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.58523706900000005" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="imgLogo" destination="iWh-kr-BQA" id="5EH-sg-Kn1"/>
+                                    <outlet property="lblSubtitle" destination="oQX-Px-wDD" id="xgU-kA-I18"/>
                                     <outlet property="lblTitle" destination="F9t-vJ-6ld" id="LB6-xt-x8g"/>
                                 </connections>
                             </tableViewCell>

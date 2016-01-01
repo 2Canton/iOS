@@ -56,6 +56,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
+    
     MSTable *table = [client tableWithName:@"Evento"];
     MSQuery *query = [table query];
     [query orderByAscending:@"nombre"];
