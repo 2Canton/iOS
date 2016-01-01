@@ -13,10 +13,10 @@
 		78431BD21C3375DE0063749E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD11C3375DE0063749E /* Event.m */; };
 		78431BD51C3376A90063749E /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD41C3376A90063749E /* EventTableViewCell.m */; };
 		78431BD81C33781F0063749E /* EventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD71C33781F0063749E /* EventTableViewController.m */; };
+		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
 		78B282961C3086C300EA579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B282941C3086C300EA579A /* Main.storyboard */; };
 		78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B2829E1C308A5100EA579A /* RouteTableViewController.m */; };
-		78B282A11C308AA700EA579A /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B282A01C308AA700EA579A /* WindowsAzureMobileServices.framework */; };
 		78B282A41C30D37200EA579A /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A31C30D37200EA579A /* Route.m */; };
 		78B282A71C30D6EC00EA579A /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A61C30D6EC00EA579A /* Schedule.m */; };
 		78B282AA1C30D75400EA579A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A91C30D75400EA579A /* ScheduleTableViewController.m */; };
@@ -66,7 +66,7 @@
 		78EAE3641C2FAF9500EC494D /* website.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE35E1C2FAF9500EC494D /* website.png */; };
 		78EAE3681C2FAFF600EC494D /* Option.m in Sources */ = {isa = PBXBuildFile; fileRef = 78EAE3671C2FAFF600EC494D /* Option.m */; };
 		78EAE36A1C2FB0DF00EC494D /* resources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE3691C2FB0DF00EC494D /* resources.plist */; };
-		F7AC50C0786CD0488838F904 /* libPods-Carriot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246B99EA850D8FB1C687AA5B /* libPods-Carriot.a */; };
+		A9935490F6FEECDC9791100A /* libPods-Carriot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246B99EA850D8FB1C687AA5B /* libPods-Carriot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,11 +101,11 @@
 		78431BD41C3376A90063749E /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
 		78431BD61C33781F0063749E /* EventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewController.h; sourceTree = "<group>"; };
 		78431BD71C33781F0063749E /* EventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewController.m; sourceTree = "<group>"; };
+		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		78B282951C3086C300EA579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78B2829D1C308A5100EA579A /* RouteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTableViewController.h; sourceTree = "<group>"; };
 		78B2829E1C308A5100EA579A /* RouteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTableViewController.m; sourceTree = "<group>"; };
-		78B282A01C308AA700EA579A /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		78B282A21C30D37200EA579A /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		78B282A31C30D37200EA579A /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		78B282A51C30D6EC00EA579A /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
@@ -184,8 +184,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B282A11C308AA700EA579A /* WindowsAzureMobileServices.framework in Frameworks */,
-				F7AC50C0786CD0488838F904 /* libPods-Carriot.a in Frameworks */,
+				7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */,
+				A9935490F6FEECDC9791100A /* libPods-Carriot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +238,8 @@
 		78BAFBB71C2F454500FEF250 /* Carriot */ = {
 			isa = PBXGroup;
 			children = (
+				7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */,
 				78314B9F1C36468F00F882C0 /* Helper */,
-				78B282A01C308AA700EA579A /* WindowsAzureMobileServices.framework */,
 				78BAFBF61C2F476300FEF250 /* img */,
 				78EAE3651C2FAFE800EC494D /* Model */,
 				78BAFBEF1C2F468B00FEF250 /* Controller */,
@@ -731,6 +731,7 @@
 		};
 		78BAFBE11C2F454500FEF250 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A939DA629428533AA1EA602A /* Pods-Carriot.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
