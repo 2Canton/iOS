@@ -12,7 +12,7 @@
 #import "OptionTableViewCell.h"
 #import "Option.h"
 #import "AppDelegate.h"
-#import "ScheduleTableViewController.h"
+#import "CAScheduleViewController.h"
 
 @interface CARouteViewController ()
 {
@@ -153,7 +153,7 @@
 {
     if([[segue identifier] isEqualToString:@"schedule"])
     {
-        ScheduleTableViewController * view = [segue destinationViewController];
+        CAScheduleViewController * view = [segue destinationViewController];
         
         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
         

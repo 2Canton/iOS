@@ -1,12 +1,12 @@
 //
-//  ScheduleTableViewController.m
+//  CAScheduleViewController.m
 //  Carriot
 //
-//  Created by user on 12/27/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "ScheduleTableViewController.h"
+#import "CAScheduleViewController.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "Schedule.h"
 #import "OptionTableViewCell.h"
@@ -14,49 +14,38 @@
 #include <stdlib.h>
 #import "RoutePathTableViewController.h"
 
-@interface ScheduleTableViewController ()
-{
-    NSMutableArray *shedulesCollection;
-}
+@interface CAScheduleViewController ()
+
 @end
 
-@implementation ScheduleTableViewController
+@implementation CAScheduleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
-    [self.activityIndicator startAnimating];
-    
-    
-    // se establece la imagen de fondo
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
-    UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-    [tableBackgroundView setFrame: self.tableView.frame];
-    
-    [self.tableView setBackgroundView:tableBackgroundView];
+    [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
     
     [self loadData];
-    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+
 }
-
-
 
 - (void) loadData
 {
-    shedulesCollection = [[NSMutableArray alloc] init];
+    self.collection = [[NSMutableArray alloc] init];
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
     NSDictionary *parameters = @{ @"id": _idRoute};
-
+    
     [client invokeAPI:@"horarioruta"
                  body:nil
            HTTPMethod:@"GET"
@@ -82,12 +71,12 @@
                        
                        
                        
-                       [shedulesCollection addObject:schedule];
+                       [self.collection addObject:schedule];
                        
                    }
                    
                    [self.tableView reloadData];
-                
+                   
                    
                }
                
@@ -98,13 +87,11 @@
     
 }
 
-
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return shedulesCollection.count;
+    return self.collection.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -133,7 +120,7 @@
     
     long row = [indexPath section];
     
-    Schedule  *schedule = [shedulesCollection objectAtIndex:row];
+    Schedule  *schedule = [self.collection objectAtIndex:row];
     
     
     [cell.lblTitle setText:schedule.dias];
@@ -171,7 +158,7 @@
         
         long row = [myIndexPath section];
         
-        Schedule  *schedule = [shedulesCollection objectAtIndex:row];
+        Schedule  *schedule = [self.collection objectAtIndex:row];
         
         view.idRoute = _idRoute;
         view.idSchedule = schedule.id;
