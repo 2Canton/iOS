@@ -1,12 +1,12 @@
 //
-//  RouteTableViewController.m
+//  CARouteViewController.m
 //  Carriot
 //
-//  Created by user on 12/27/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "RouteTableViewController.h"
+#import "CARouteViewController.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "Route.h"
 #import "OptionTableViewCell.h"
@@ -14,43 +14,35 @@
 #import "AppDelegate.h"
 #import "ScheduleTableViewController.h"
 
-@interface RouteTableViewController ()
+@interface CARouteViewController ()
 {
-    NSMutableArray *routesCollection;
     NSString * imageName;
 }
 @end
 
-@implementation RouteTableViewController
+@implementation CARouteViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
+    self.collection = [[NSMutableArray alloc] init];
     
-   
-    
-    // se establece la imagen de fondo
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
-    UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-    [tableBackgroundView setFrame: self.tableView.frame];
-    
-    [self.tableView setBackgroundView:tableBackgroundView];
+    [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
     
-    [self loadRoutes];
-    
+    [self loadData];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void) loadRoutes
+- (void) loadData
 {
-    routesCollection = [[NSMutableArray alloc] init];
+    
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
@@ -90,14 +82,14 @@
                 
                 
                 
-                [routesCollection addObject:route];
+                [self.collection addObject:route];
                 
             }
             
             
             [self.tableView reloadData];
             
-
+            
             
         }
         [self.activityIndicator stopAnimating];
@@ -111,7 +103,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return routesCollection.count;
+    return [self.collection count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -121,8 +113,9 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 10;
+    return 0;
 }
+
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
@@ -140,7 +133,7 @@
     
     long row = [indexPath section];
     
-    Route  *route = [routesCollection objectAtIndex:row];
+    Route  *route = [self.collection objectAtIndex:row];
     
     
     [cell.lblTitle setText:route.nombre];
@@ -166,7 +159,7 @@
         
         long row = [myIndexPath section];
         
-        Route  *route = [routesCollection objectAtIndex:row];
+        Route  *route = [self.collection  objectAtIndex:row];
         
         view.idRoute = route.id;
     }
@@ -179,7 +172,6 @@
     [self performSegueWithIdentifier:@"schedule" sender:self];
     
 }
-
 
 
 @end

@@ -12,11 +12,12 @@
 		78431BCF1C3317470063749E /* EventCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCE1C3317470063749E /* EventCategory.m */; };
 		78431BD21C3375DE0063749E /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD11C3375DE0063749E /* Event.m */; };
 		78431BD51C3376A90063749E /* EventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BD41C3376A90063749E /* EventTableViewCell.m */; };
+		785211FB1C39CDC5005FE5DF /* CARouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785211FA1C39CDC5005FE5DF /* CARouteViewController.m */; };
+		785211FE1C39CE56005FE5DF /* CABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785211FD1C39CE56005FE5DF /* CABaseViewController.m */; };
 		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
 		78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1F01C371B81001CB717 /* EventsViewController.m */; };
 		78B282961C3086C300EA579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B282941C3086C300EA579A /* Main.storyboard */; };
-		78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B2829E1C308A5100EA579A /* RouteTableViewController.m */; };
 		78B282A41C30D37200EA579A /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A31C30D37200EA579A /* Route.m */; };
 		78B282A71C30D6EC00EA579A /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A61C30D6EC00EA579A /* Schedule.m */; };
 		78B282AA1C30D75400EA579A /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282A91C30D75400EA579A /* ScheduleTableViewController.m */; };
@@ -99,13 +100,15 @@
 		78431BD11C3375DE0063749E /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		78431BD31C3376A90063749E /* EventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTableViewCell.h; sourceTree = "<group>"; };
 		78431BD41C3376A90063749E /* EventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableViewCell.m; sourceTree = "<group>"; };
+		785211F91C39CDC5005FE5DF /* CARouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARouteViewController.h; sourceTree = "<group>"; };
+		785211FA1C39CDC5005FE5DF /* CARouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARouteViewController.m; sourceTree = "<group>"; };
+		785211FC1C39CE56005FE5DF /* CABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABaseViewController.h; sourceTree = "<group>"; };
+		785211FD1C39CE56005FE5DF /* CABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CABaseViewController.m; sourceTree = "<group>"; };
 		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		78B0D1EF1C371B81001CB717 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		78B0D1F01C371B81001CB717 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		78B282951C3086C300EA579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		78B2829D1C308A5100EA579A /* RouteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouteTableViewController.h; sourceTree = "<group>"; };
-		78B2829E1C308A5100EA579A /* RouteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouteTableViewController.m; sourceTree = "<group>"; };
 		78B282A21C30D37200EA579A /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
 		78B282A31C30D37200EA579A /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
 		78B282A51C30D6EC00EA579A /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
@@ -302,8 +305,6 @@
 			children = (
 				78BAFBF31C2F46F500FEF250 /* OptionTableViewController.h */,
 				78BAFBF41C2F46F500FEF250 /* OptionTableViewController.m */,
-				78B2829D1C308A5100EA579A /* RouteTableViewController.h */,
-				78B2829E1C308A5100EA579A /* RouteTableViewController.m */,
 				78B282A81C30D75400EA579A /* ScheduleTableViewController.h */,
 				78B282A91C30D75400EA579A /* ScheduleTableViewController.m */,
 				78B282C41C30FA6200EA579A /* RoutePathTableViewController.h */,
@@ -318,6 +319,10 @@
 				78314BA41C364BDD00F882C0 /* EventDetailViewController.m */,
 				78B0D1EF1C371B81001CB717 /* EventsViewController.h */,
 				78B0D1F01C371B81001CB717 /* EventsViewController.m */,
+				785211F91C39CDC5005FE5DF /* CARouteViewController.h */,
+				785211FA1C39CDC5005FE5DF /* CARouteViewController.m */,
+				785211FC1C39CE56005FE5DF /* CABaseViewController.h */,
+				785211FD1C39CE56005FE5DF /* CABaseViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -618,10 +623,10 @@
 				78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */,
 				78B323631C31B3A70031A315 /* CompanyTableViewCell.m in Sources */,
 				78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */,
+				785211FE1C39CE56005FE5DF /* CABaseViewController.m in Sources */,
 				78EAE3681C2FAFF600EC494D /* Option.m in Sources */,
 				78B282C91C30FE7200EA579A /* HourDescriptionTableViewCell.m in Sources */,
 				78B323531C31A7540031A315 /* CompaniesCategory.m in Sources */,
-				78B2829F1C308A5100EA579A /* RouteTableViewController.m in Sources */,
 				78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */,
 				78431BD21C3375DE0063749E /* Event.m in Sources */,
 				78B3235D1C31B1E60031A315 /* CompaniesTableViewController.m in Sources */,
@@ -629,6 +634,7 @@
 				78B323601C31B2970031A315 /* Company.m in Sources */,
 				78BAFBF51C2F46F500FEF250 /* OptionTableViewController.m in Sources */,
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,
+				785211FB1C39CDC5005FE5DF /* CARouteViewController.m in Sources */,
 				78B282A41C30D37200EA579A /* Route.m in Sources */,
 				78B282AA1C30D75400EA579A /* ScheduleTableViewController.m in Sources */,
 				78431BD51C3376A90063749E /* EventTableViewCell.m in Sources */,
