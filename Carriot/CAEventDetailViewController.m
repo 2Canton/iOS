@@ -1,21 +1,21 @@
 //
-//  EventDetailViewController.m
+//  CAEventDetailViewController.m
 //  Carriot
 //
-//  Created by user on 12/31/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/4/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "EventDetailViewController.h"
+#import "CAEventDetailViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
-@interface EventDetailViewController ()
+@interface CAEventDetailViewController ()
 {
     NSDateFormatter *dateFormat;
 }
 @end
 
-@implementation EventDetailViewController
+@implementation CAEventDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,13 +27,13 @@
     [self.lblName setText: _event.nombre];
     
     [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:_event.urlimagen]
-                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+                      placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
     [self.lblDate setText: [NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:_event.fecha_aux]]];
     [self.lblHour setText: [NSString stringWithFormat:@"Hora: %@",_event.hora]];
     [self.lblAmount setText: _event.costo];
     [self.lblDescription setText: _event.descripcion];
-
+    
     
 }
 
@@ -41,15 +41,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -132,6 +132,14 @@
     
     long row = [indexPath section];
     
+    if (cell == nil) {
+        cell = [[CAOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+    }
+    else
+    {
+        
+    
     CARoute  *route = [self.collection objectAtIndex:row];
     
     
@@ -144,7 +152,7 @@
     [cell.imgLogo setImage:[UIImage imageNamed:imageName]];
     
     [cell.layer setCornerRadius:35.0f];
-    
+    }
     return cell;
 }
 

@@ -130,14 +130,28 @@
     }
     
     long row = [indexPath section];
+
     
     CACompaniesCategory  *companyCategory = [self.collection objectAtIndex:row];
     
     [cell.lblTitle setText:companyCategory.nombre];
     
+    /*
     [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:companyCategory.urlimagen]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];
+     */
     
+    // Here we use the new provided sd_setImageWithURL: method to load the web image
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:companyCategory.urlimagen]
+                      placeholderImage:[UIImage imageNamed:@"picture.png"]
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL)
+                            {
+                                NSLog(@"%@",error.description);
+                                if (error != nil)
+                                {
+                                    [cell.imgLogo setImage:[UIImage imageNamed:@"picture_removed.png"]];
+                                }
+                             }];
     
     [cell.layer setCornerRadius:35.0f];
     

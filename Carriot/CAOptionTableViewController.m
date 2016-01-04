@@ -90,6 +90,12 @@
     
     CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    if (cell == nil) {
+        cell = [[CAOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+    }
+    
+        
     long row = [indexPath section];
     
     CAOption *option = [optionsArray objectAtIndex:row];
@@ -97,8 +103,9 @@
     [cell.lblTitle setText:option.title];
     [cell.imgLogo setImage:[UIImage imageNamed:option.image]];
     
-    
     [cell.layer setCornerRadius:35.0f];
+    
+    
     
     return cell;
 }

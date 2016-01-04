@@ -118,16 +118,21 @@
     
     CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    if (cell == nil) {
+        cell = [[CAOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+    }
+    
     long row = [indexPath section];
     
     CASchedule  *schedule = [self.collection objectAtIndex:row];
-    
     
     [cell.lblTitle setText:schedule.dias];
     
     [cell.imgLogo setImage:[UIImage imageNamed:[self randomImage]]];
     
     [cell.layer setCornerRadius:35.0f];
+        
     
     return cell;
 }

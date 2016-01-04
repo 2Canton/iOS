@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78314BA41C364BDD00F882C0 /* EventDetailViewController.m */; };
-		78431BCC1C33165F0063749E /* EventsCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */; };
 		785211FB1C39CDC5005FE5DF /* CARouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785211FA1C39CDC5005FE5DF /* CARouteViewController.m */; };
 		785211FE1C39CE56005FE5DF /* CABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785211FD1C39CE56005FE5DF /* CABaseViewController.m */; };
 		785212011C39E7EB005FE5DF /* CAScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212001C39E7EB005FE5DF /* CAScheduleViewController.m */; };
@@ -30,7 +28,6 @@
 		785212311C39F934005FE5DF /* CACompaniesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212301C39F934005FE5DF /* CACompaniesViewController.m */; };
 		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
-		78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1F01C371B81001CB717 /* EventsViewController.m */; };
 		78B282961C3086C300EA579A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78B282941C3086C300EA579A /* Main.storyboard */; };
 		78B282B61C30EEDE00EA579A /* calendar0.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AB1C30EEDE00EA579A /* calendar0.png */; };
 		78B282B71C30EEDE00EA579A /* calendar1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282AC1C30EEDE00EA579A /* calendar1.png */; };
@@ -45,7 +42,6 @@
 		78B282C01C30EEDE00EA579A /* calendar10.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B51C30EEDE00EA579A /* calendar10.png */; };
 		78B323591C31ADC40031A315 /* picture_removed.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323571C31ADC40031A315 /* picture_removed.png */; };
 		78B3235A1C31ADC40031A315 /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323581C31ADC40031A315 /* picture.png */; };
-		78B3235D1C31B1E60031A315 /* CompaniesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B3235C1C31B1E60031A315 /* CompaniesTableViewController.m */; };
 		78B323661C31B8550031A315 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323641C31B8550031A315 /* map.png */; };
 		78B323671C31B8550031A315 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323651C31B8550031A315 /* phone.png */; };
 		78BAFBBA1C2F454500FEF250 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBB91C2F454500FEF250 /* main.m */; };
@@ -54,6 +50,9 @@
 		78BAFBC81C2F454500FEF250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BAFBC61C2F454500FEF250 /* LaunchScreen.storyboard */; };
 		78BAFBD31C2F454500FEF250 /* CarriotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBD21C2F454500FEF250 /* CarriotTests.m */; };
 		78BAFBDE1C2F454500FEF250 /* CarriotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBDD1C2F454500FEF250 /* CarriotUITests.m */; };
+		78E292F51C3AF364003CF2F3 /* CAEventsCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E292F41C3AF364003CF2F3 /* CAEventsCategoryViewController.m */; };
+		78E292F81C3AFA82003CF2F3 /* CAEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E292F71C3AFA82003CF2F3 /* CAEventsViewController.m */; };
+		78E292FB1C3AFB0B003CF2F3 /* CAEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E292FA1C3AFB0B003CF2F3 /* CAEventDetailViewController.m */; };
 		78EAE34C1C2FA92100EC494D /* bus0.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE3491C2FA92100EC494D /* bus0.png */; };
 		78EAE34D1C2FA92100EC494D /* bus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE34A1C2FA92100EC494D /* bus1.png */; };
 		78EAE34E1C2FA92100EC494D /* iglesia.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE34B1C2FA92100EC494D /* iglesia.png */; };
@@ -91,10 +90,6 @@
 /* Begin PBXFileReference section */
 		246B99EA850D8FB1C687AA5B /* libPods-Carriot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Carriot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7608EB67B65F5B215D906185 /* Pods-Carriot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carriot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carriot/Pods-Carriot.debug.xcconfig"; sourceTree = "<group>"; };
-		78314BA31C364BDD00F882C0 /* EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventDetailViewController.h; sourceTree = "<group>"; };
-		78314BA41C364BDD00F882C0 /* EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventDetailViewController.m; sourceTree = "<group>"; };
-		78431BCA1C33165F0063749E /* EventsCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsCategoryTableViewController.h; sourceTree = "<group>"; };
-		78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsCategoryTableViewController.m; sourceTree = "<group>"; };
 		785211F91C39CDC5005FE5DF /* CARouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARouteViewController.h; sourceTree = "<group>"; };
 		785211FA1C39CDC5005FE5DF /* CARouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CARouteViewController.m; sourceTree = "<group>"; };
 		785211FC1C39CE56005FE5DF /* CABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABaseViewController.h; sourceTree = "<group>"; };
@@ -135,8 +130,6 @@
 		785212301C39F934005FE5DF /* CACompaniesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACompaniesViewController.m; sourceTree = "<group>"; };
 		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
-		78B0D1EF1C371B81001CB717 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
-		78B0D1F01C371B81001CB717 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		78B282951C3086C300EA579A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78B282AB1C30EEDE00EA579A /* calendar0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar0.png; sourceTree = "<group>"; };
 		78B282AC1C30EEDE00EA579A /* calendar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar1.png; sourceTree = "<group>"; };
@@ -151,8 +144,6 @@
 		78B282B51C30EEDE00EA579A /* calendar10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar10.png; sourceTree = "<group>"; };
 		78B323571C31ADC40031A315 /* picture_removed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture_removed.png; sourceTree = "<group>"; };
 		78B323581C31ADC40031A315 /* picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture.png; sourceTree = "<group>"; };
-		78B3235B1C31B1E60031A315 /* CompaniesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompaniesTableViewController.h; sourceTree = "<group>"; };
-		78B3235C1C31B1E60031A315 /* CompaniesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompaniesTableViewController.m; sourceTree = "<group>"; };
 		78B323641C31B8550031A315 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		78B323651C31B8550031A315 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
 		78BAFBB51C2F454500FEF250 /* Carriot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carriot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +159,12 @@
 		78BAFBD91C2F454500FEF250 /* CarriotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarriotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BAFBDD1C2F454500FEF250 /* CarriotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarriotUITests.m; sourceTree = "<group>"; };
 		78BAFBDF1C2F454500FEF250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78E292F31C3AF364003CF2F3 /* CAEventsCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEventsCategoryViewController.h; sourceTree = "<group>"; };
+		78E292F41C3AF364003CF2F3 /* CAEventsCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEventsCategoryViewController.m; sourceTree = "<group>"; };
+		78E292F61C3AFA82003CF2F3 /* CAEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEventsViewController.h; sourceTree = "<group>"; };
+		78E292F71C3AFA82003CF2F3 /* CAEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEventsViewController.m; sourceTree = "<group>"; };
+		78E292F91C3AFB0B003CF2F3 /* CAEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEventDetailViewController.h; sourceTree = "<group>"; };
+		78E292FA1C3AFB0B003CF2F3 /* CAEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEventDetailViewController.m; sourceTree = "<group>"; };
 		78EAE3491C2FA92100EC494D /* bus0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus0.png; sourceTree = "<group>"; };
 		78EAE34A1C2FA92100EC494D /* bus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus1.png; sourceTree = "<group>"; };
 		78EAE34B1C2FA92100EC494D /* iglesia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iglesia.png; sourceTree = "<group>"; };
@@ -306,14 +303,6 @@
 		78BAFBEF1C2F468B00FEF250 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				78B3235B1C31B1E60031A315 /* CompaniesTableViewController.h */,
-				78B3235C1C31B1E60031A315 /* CompaniesTableViewController.m */,
-				78431BCA1C33165F0063749E /* EventsCategoryTableViewController.h */,
-				78431BCB1C33165F0063749E /* EventsCategoryTableViewController.m */,
-				78314BA31C364BDD00F882C0 /* EventDetailViewController.h */,
-				78314BA41C364BDD00F882C0 /* EventDetailViewController.m */,
-				78B0D1EF1C371B81001CB717 /* EventsViewController.h */,
-				78B0D1F01C371B81001CB717 /* EventsViewController.m */,
 				785211F91C39CDC5005FE5DF /* CARouteViewController.h */,
 				785211FA1C39CDC5005FE5DF /* CARouteViewController.m */,
 				785211FC1C39CE56005FE5DF /* CABaseViewController.h */,
@@ -328,6 +317,12 @@
 				7852122D1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m */,
 				7852122F1C39F934005FE5DF /* CACompaniesViewController.h */,
 				785212301C39F934005FE5DF /* CACompaniesViewController.m */,
+				78E292F31C3AF364003CF2F3 /* CAEventsCategoryViewController.h */,
+				78E292F41C3AF364003CF2F3 /* CAEventsCategoryViewController.m */,
+				78E292F61C3AFA82003CF2F3 /* CAEventsViewController.h */,
+				78E292F71C3AFA82003CF2F3 /* CAEventsViewController.m */,
+				78E292F91C3AFB0B003CF2F3 /* CAEventDetailViewController.h */,
+				78E292FA1C3AFB0B003CF2F3 /* CAEventDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -623,22 +618,21 @@
 				785212131C39ED14005FE5DF /* CACompany.m in Sources */,
 				78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */,
 				785212221C39EEA9005FE5DF /* CACompanyTableViewCell.m in Sources */,
-				78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */,
 				7852122E1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m in Sources */,
 				7852122B1C39F692005FE5DF /* CAOptionTableViewController.m in Sources */,
 				785211FE1C39CE56005FE5DF /* CABaseViewController.m in Sources */,
 				785212311C39F934005FE5DF /* CACompaniesViewController.m in Sources */,
-				78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */,
 				785212251C39EECB005FE5DF /* CAEventTableViewCell.m in Sources */,
-				78B3235D1C31B1E60031A315 /* CompaniesTableViewController.m in Sources */,
-				78431BCC1C33165F0063749E /* EventsCategoryTableViewController.m in Sources */,
 				785212161C39ED34005FE5DF /* CAEventCategory.m in Sources */,
+				78E292F51C3AF364003CF2F3 /* CAEventsCategoryViewController.m in Sources */,
 				785212041C39EB1A005FE5DF /* CAOption.m in Sources */,
+				78E292F81C3AFA82003CF2F3 /* CAEventsViewController.m in Sources */,
 				7852120A1C39EBAD005FE5DF /* CASchedule.m in Sources */,
 				7852121F1C39EE6D005FE5DF /* CAScheduleDescriptionTableViewCell.m in Sources */,
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,
 				785212281C39F384005FE5DF /* CAScheduleDescriptionViewController.m in Sources */,
 				785211FB1C39CDC5005FE5DF /* CARouteViewController.m in Sources */,
+				78E292FB1C3AFB0B003CF2F3 /* CAEventDetailViewController.m in Sources */,
 				785212191C39ED4D005FE5DF /* CAEvent.m in Sources */,
 				785212071C39EB92005FE5DF /* CARoute.m in Sources */,
 				785212011C39E7EB005FE5DF /* CAScheduleViewController.m in Sources */,

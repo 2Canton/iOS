@@ -1,63 +1,58 @@
 //
-//  EventsCategoryTableViewController.m
+//  CAEventsViewController.m
 //  Carriot
 //
-//  Created by user on 12/29/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/4/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "EventsCategoryTableViewController.h"
-#import "CAOptionTableViewCell.h"
-#import "CAEventCategory.h"
-#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
+#import "CAEventsViewController.h"
 #import "AppDelegate.h"
+#import "CAEventTableViewCell.h"
+#import "CAEvent.h"
+#import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "EventsViewController.h"
+#import "CAEventDetailViewController.h"
 
-
-
-@interface EventsCategoryTableViewController ()
+@interface CAEventsViewController ()
 {
     NSMutableArray *collection;
+    NSDateFormatter *dateFormat;
 }
 @end
 
-@implementation EventsCategoryTableViewController
+@implementation CAEventsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // se establece la imagen de fondo
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
-    UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-    [tableBackgroundView setFrame: self.tableView.frame];
+    dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd/MM/yyyy"];
     
-    [self.tableView setBackgroundView:tableBackgroundView];
+    
+    [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
     
     [self loadData];
-    
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 - (void) loadData
 {
     collection = [[NSMutableArray alloc] init];
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    [client invokeAPI:@"events"
+    NSDictionary *parameters = @{ @"idTipoEvento": _idCategory };
+    
+    [client invokeAPI:@"eventscategory"
                  body:nil
            HTTPMethod:@"GET"
-           parameters:nil
+           parameters:parameters
               headers:nil
            completion:  ^(NSDictionary *result,
                           NSHTTPURLResponse *response,
@@ -69,26 +64,33 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       CAEventCategory *eventCategory = [[CAEventCategory alloc] init];
+                       CAEvent *event = [[CAEvent alloc] init];
                        
                        for (NSString *key in item) {
-                           if ([eventCategory respondsToSelector:NSSelectorFromString(key)]) {
-                               [eventCategory setValue:[item valueForKey:key] forKey:key];
+                           if ([event respondsToSelector:NSSelectorFromString(key)]) {
+                               [event setValue:[item valueForKey:key] forKey:key];
                            }
                        }
                        
                        
-                       
-                       [collection addObject:eventCategory];
+                       [collection addObject:event];
                        
                    }
                    
                    [self.tableView reloadData];
                    
-                   
                }
                
                [self.activityIndicator stopAnimating];
+               
+               if (collection.count == 0) {
+                   [self.errorView setHidden:NO];
+               }
+               else
+               {
+                   [self.errorView setHidden:YES];
+               }
+               
                
                
            }];
@@ -122,23 +124,27 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * cellIdentifier = @"eventCategoryTableViewCell";
+    static NSString * cellIdentifier = @"eventTableViewCell";
     
-    CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAEventTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[CAOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CAEventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    CAEventCategory  *eventCategory = [collection objectAtIndex:row];
+    CAEvent  *event = [collection objectAtIndex:row];
     
-    [cell.lblTitle setText:eventCategory.nombre];
+    [cell.lblName setText:event.nombre];
     
-    [cell.lblSubtitle setText:[NSString stringWithFormat:@"Cantidad: %@",eventCategory.cantidad_eventos]];
     
-    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:eventCategory.urlimagen]
+    
+    [cell.lblDate setText:[NSString stringWithFormat:@"Fecha: %@",[dateFormat stringFromDate:event.fecha_aux]]];
+    [cell.lblHour setText:[NSString stringWithFormat:@"Hora: %@",event.hora]];
+    [cell.lblAmount setText:[NSString stringWithFormat:@"Costo: %@",event.costo]];
+    
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:event.urlimagen]
                     placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
     
@@ -150,19 +156,17 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"events"])
+    if([[segue identifier] isEqualToString:@"eventDetail"])
     {
-        //EventTableViewController * view = [segue destinationViewController];
-        
-        EventsViewController * view = [segue destinationViewController];
+        CAEventDetailViewController * view = [segue destinationViewController];
         
         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
         
         long row = [myIndexPath section];
         
-        CAEventCategory  *eventCategory = [collection objectAtIndex:row];
+        CAEvent  *event = [collection objectAtIndex:row];
         
-        view.idCategory = eventCategory.id;
+        view.event = event;
     }
 }
 
@@ -170,7 +174,7 @@
 {
     
     // mostramos el segue
-    [self performSegueWithIdentifier:@"events" sender:self];
+    [self performSegueWithIdentifier:@"eventDetail" sender:self];
     
 }
 

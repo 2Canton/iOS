@@ -115,6 +115,12 @@
     
     CAScheduleDescriptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
+    if (cell == nil) {
+        cell = [[CAScheduleDescriptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        
+    }
+    
+    
     long row = [indexPath section];
     
     CAScheduleDescription *option = [self.collection objectAtIndex:row];

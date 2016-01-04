@@ -1,15 +1,15 @@
 //
-//  EventDetailViewController.h
+//  CAEventDetailViewController.h
 //  Carriot
 //
-//  Created by user on 12/31/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/4/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "CAEvent.h"
 
-@interface EventDetailViewController : UIViewController
+@interface CAEventDetailViewController : UIViewController
 
 @property (strong,nonatomic) CAEvent * event;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
@@ -18,7 +18,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblHour;
 @property (weak, nonatomic) IBOutlet UILabel *lblAmount;
 @property (weak, nonatomic) IBOutlet UILabel *lblDescription;
-
-
 
 @end

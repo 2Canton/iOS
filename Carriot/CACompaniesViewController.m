@@ -148,44 +148,43 @@
         cell = [[CACompanyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
         
     }
-    else
-    {
    
-        CACompany  *company = [self.collection objectAtIndex:row];
+   
+    CACompany  *company = [self.collection objectAtIndex:row];
     
-        [cell.lblName setText:company.nombre];
+    [cell.lblName setText:company.nombre];
     
-        [cell.lblAddress setText:company.direccion];
+    [cell.lblAddress setText:company.direccion];
     
-        [cell.lblTime setText:company.horario];
+    [cell.lblTime setText:company.horario];
     
-        // Here we use the new provided sd_setImageWithURL: method to load the web image
-        [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:company.urlimagen]
-                    placeholderImage:[UIImage imageNamed:@"picture.png"]];
+    // Here we use the new provided sd_setImageWithURL: method to load the web image
+    [cell.imgLogo sd_setImageWithURL:[NSURL URLWithString:company.urlimagen]
+                placeholderImage:[UIImage imageNamed:@"picture.png"]];
     
-        [cell.imgPhone setTag:row];
-        [cell.imgEmail setTag:row];
-        [cell.imgLocation setTag:row];
-        [cell.imgWeb setTag:row];
+    [cell.imgPhone setTag:row];
+    [cell.imgEmail setTag:row];
+    [cell.imgLocation setTag:row];
+    [cell.imgWeb setTag:row];
     
-        // se verifica si ya hay un reconocedor 
-        if (cell.imgPhone.gestureRecognizers.count == 0)
-        {
-            singlePhoneTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapPhoneGestureCaptured:)];
-            singleEmailTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapEmailGestureCaptured:)];
-            singleLocationTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapLocationGestureCaptured:)];
-            singleWebTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapWebGestureCaptured:)];
+    // se verifica si ya hay un reconocedor
+    if (cell.imgPhone.gestureRecognizers.count == 0)
+    {
+        singlePhoneTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapPhoneGestureCaptured:)];
+        singleEmailTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapEmailGestureCaptured:)];
+        singleLocationTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapLocationGestureCaptured:)];
+        singleWebTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(singleTapWebGestureCaptured:)];
             
             
-            [cell.imgPhone addGestureRecognizer:singlePhoneTap];
-            [cell.imgEmail addGestureRecognizer:singleEmailTap];
-            [cell.imgLocation addGestureRecognizer:singleLocationTap];
-            [cell.imgWeb addGestureRecognizer:singleWebTap];
+        [cell.imgPhone addGestureRecognizer:singlePhoneTap];
+        [cell.imgEmail addGestureRecognizer:singleEmailTap];
+        [cell.imgLocation addGestureRecognizer:singleLocationTap];
+        [cell.imgWeb addGestureRecognizer:singleWebTap];
             
-        }
-    
-        [cell.layer setCornerRadius:35.0f];
     }
+    
+    [cell.layer setCornerRadius:35.0f];
+    
     return cell;
 }
 
