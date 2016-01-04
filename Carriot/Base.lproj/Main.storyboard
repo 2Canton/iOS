@@ -1762,17 +1762,21 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-f8-Rx3">
                                                     <rect key="frame" x="16" y="284" width="569" height="50"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="k5p-Ti-wYd">
+                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.png" translatesAutoresizingMaskIntoConstraints="NO" id="k5p-Ti-wYd">
                                                             <rect key="frame" x="0.0" y="0.0" width="142" height="50"/>
+                                                            <gestureRecognizers/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.png" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-xd-Xfr">
+                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.png" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-xd-Xfr">
                                                             <rect key="frame" x="142" y="0.0" width="143" height="50"/>
+                                                            <gestureRecognizers/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map.png" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-6k-4b5">
+                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map.png" translatesAutoresizingMaskIntoConstraints="NO" id="zX3-6k-4b5">
                                                             <rect key="frame" x="285" y="0.0" width="142" height="50"/>
+                                                            <gestureRecognizers/>
                                                         </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="website.png" translatesAutoresizingMaskIntoConstraints="NO" id="R7r-QG-FLm">
+                                                        <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="website.png" translatesAutoresizingMaskIntoConstraints="NO" id="R7r-QG-FLm">
                                                             <rect key="frame" x="427" y="0.0" width="142" height="50"/>
+                                                            <gestureRecognizers/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -1815,8 +1819,13 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.60264008619999998" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <connections>
+                                            <outlet property="imgEmail" destination="IhZ-xd-Xfr" id="Ut8-Ui-CuX"/>
+                                            <outlet property="imgLocation" destination="zX3-6k-4b5" id="pJG-ad-GaF"/>
                                             <outlet property="imgLogo" destination="BRI-Wp-4nT" id="gsf-3A-SeD"/>
+                                            <outlet property="imgPhone" destination="k5p-Ti-wYd" id="s5H-s2-dWR"/>
+                                            <outlet property="imgWeb" destination="R7r-QG-FLm" id="a77-a1-42f"/>
                                             <outlet property="lblAddress" destination="Sn6-c2-vGH" id="I1M-h4-bpg"/>
                                             <outlet property="lblName" destination="9aX-Yt-K8g" id="k7y-Rt-AgI"/>
                                             <outlet property="lblTime" destination="h83-Nd-SXj" id="PlT-Rr-TM4"/>
@@ -1826,6 +1835,7 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.39660560340000001" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Aaf-8H-ujE" firstAttribute="height" secondItem="pe1-8h-xLP" secondAttribute="height" constant="-64" id="2aJ-ko-Nz4"/>
                             <constraint firstAttribute="trailing" secondItem="Aaf-8H-ujE" secondAttribute="trailing" id="2xb-dn-Huf"/>

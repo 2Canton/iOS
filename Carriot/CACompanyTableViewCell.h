@@ -14,5 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblTime;
 @property (weak, nonatomic) IBOutlet UILabel *lblAddress;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPhone;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgEmail;
+@property (weak, nonatomic) IBOutlet UIImageView *imgLocation;
+@property (weak, nonatomic) IBOutlet UIImageView *imgWeb;
 
 @end
