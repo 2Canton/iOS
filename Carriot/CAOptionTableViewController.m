@@ -136,6 +136,10 @@
             viewName = @"eventsCategory";
             break;
             
+        case 4:
+            viewName = @"religion";
+            break;
+            
         default:
             break;
     }
