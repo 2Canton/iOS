@@ -25,6 +25,8 @@
 		785212221C39EEA9005FE5DF /* CACompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212211C39EEA9005FE5DF /* CACompanyTableViewCell.m */; };
 		785212251C39EECB005FE5DF /* CAEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212241C39EECB005FE5DF /* CAEventTableViewCell.m */; };
 		785212281C39F384005FE5DF /* CAScheduleDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212271C39F384005FE5DF /* CAScheduleDescriptionViewController.m */; };
+		7852122B1C39F692005FE5DF /* CAOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852122A1C39F692005FE5DF /* CAOptionTableViewController.m */; };
+		7852122E1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852122D1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m */; };
 		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
 		78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1F01C371B81001CB717 /* EventsViewController.m */; };
@@ -52,7 +54,6 @@
 		78BAFBC81C2F454500FEF250 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BAFBC61C2F454500FEF250 /* LaunchScreen.storyboard */; };
 		78BAFBD31C2F454500FEF250 /* CarriotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBD21C2F454500FEF250 /* CarriotTests.m */; };
 		78BAFBDE1C2F454500FEF250 /* CarriotUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBDD1C2F454500FEF250 /* CarriotUITests.m */; };
-		78BAFBF51C2F46F500FEF250 /* OptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BAFBF41C2F46F500FEF250 /* OptionTableViewController.m */; };
 		78EAE34C1C2FA92100EC494D /* bus0.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE3491C2FA92100EC494D /* bus0.png */; };
 		78EAE34D1C2FA92100EC494D /* bus1.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE34A1C2FA92100EC494D /* bus1.png */; };
 		78EAE34E1C2FA92100EC494D /* iglesia.png in Resources */ = {isa = PBXBuildFile; fileRef = 78EAE34B1C2FA92100EC494D /* iglesia.png */; };
@@ -126,6 +127,10 @@
 		785212241C39EECB005FE5DF /* CAEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEventTableViewCell.m; sourceTree = "<group>"; };
 		785212261C39F384005FE5DF /* CAScheduleDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScheduleDescriptionViewController.h; sourceTree = "<group>"; };
 		785212271C39F384005FE5DF /* CAScheduleDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAScheduleDescriptionViewController.m; sourceTree = "<group>"; };
+		785212291C39F692005FE5DF /* CAOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAOptionTableViewController.h; sourceTree = "<group>"; };
+		7852122A1C39F692005FE5DF /* CAOptionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAOptionTableViewController.m; sourceTree = "<group>"; };
+		7852122C1C39F6FB005FE5DF /* CACompaniesCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CACompaniesCategoryViewController.h; sourceTree = "<group>"; };
+		7852122D1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACompaniesCategoryViewController.m; sourceTree = "<group>"; };
 		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		78B0D1EF1C371B81001CB717 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -163,8 +168,6 @@
 		78BAFBD91C2F454500FEF250 /* CarriotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarriotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BAFBDD1C2F454500FEF250 /* CarriotUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CarriotUITests.m; sourceTree = "<group>"; };
 		78BAFBDF1C2F454500FEF250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78BAFBF31C2F46F500FEF250 /* OptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionTableViewController.h; sourceTree = "<group>"; };
-		78BAFBF41C2F46F500FEF250 /* OptionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionTableViewController.m; sourceTree = "<group>"; };
 		78EAE3491C2FA92100EC494D /* bus0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus0.png; sourceTree = "<group>"; };
 		78EAE34A1C2FA92100EC494D /* bus1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bus1.png; sourceTree = "<group>"; };
 		78EAE34B1C2FA92100EC494D /* iglesia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iglesia.png; sourceTree = "<group>"; };
@@ -303,8 +306,6 @@
 		78BAFBEF1C2F468B00FEF250 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				78BAFBF31C2F46F500FEF250 /* OptionTableViewController.h */,
-				78BAFBF41C2F46F500FEF250 /* OptionTableViewController.m */,
 				78B323541C31A7B20031A315 /* CompaniesCategoryTableViewController.h */,
 				78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */,
 				78B3235B1C31B1E60031A315 /* CompaniesTableViewController.h */,
@@ -323,6 +324,10 @@
 				785212001C39E7EB005FE5DF /* CAScheduleViewController.m */,
 				785212261C39F384005FE5DF /* CAScheduleDescriptionViewController.h */,
 				785212271C39F384005FE5DF /* CAScheduleDescriptionViewController.m */,
+				785212291C39F692005FE5DF /* CAOptionTableViewController.h */,
+				7852122A1C39F692005FE5DF /* CAOptionTableViewController.m */,
+				7852122C1C39F6FB005FE5DF /* CACompaniesCategoryViewController.h */,
+				7852122D1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -619,7 +624,9 @@
 				78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */,
 				785212221C39EEA9005FE5DF /* CACompanyTableViewCell.m in Sources */,
 				78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */,
+				7852122E1C39F6FB005FE5DF /* CACompaniesCategoryViewController.m in Sources */,
 				78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */,
+				7852122B1C39F692005FE5DF /* CAOptionTableViewController.m in Sources */,
 				785211FE1C39CE56005FE5DF /* CABaseViewController.m in Sources */,
 				78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */,
 				785212251C39EECB005FE5DF /* CAEventTableViewCell.m in Sources */,
@@ -629,7 +636,6 @@
 				785212041C39EB1A005FE5DF /* CAOption.m in Sources */,
 				7852120A1C39EBAD005FE5DF /* CASchedule.m in Sources */,
 				7852121F1C39EE6D005FE5DF /* CAScheduleDescriptionTableViewCell.m in Sources */,
-				78BAFBF51C2F46F500FEF250 /* OptionTableViewController.m in Sources */,
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,
 				785212281C39F384005FE5DF /* CAScheduleDescriptionViewController.m in Sources */,
 				785211FB1C39CDC5005FE5DF /* CARouteViewController.m in Sources */,

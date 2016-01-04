@@ -1,22 +1,22 @@
 //
-//  OptionTableViewController.m
+//  CAOptionTableViewController.m
 //  Carriot
 //
-//  Created by user on 12/26/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "OptionTableViewController.h"
+#import "CAOptionTableViewController.h"
 #import "CAOption.h"
 #import "CAOptionTableViewCell.h"
 
-@interface OptionTableViewController ()
+@interface CAOptionTableViewController ()
 {
     NSMutableArray * optionsArray;
 }
 @end
 
-@implementation OptionTableViewController
+@implementation CAOptionTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,9 +24,9 @@
     // se establece la imagen de fondo
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-
-
- 
+    
+    
+    
     
     [tableBackgroundView setFrame: self.tableView.frame];
     
