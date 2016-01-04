@@ -24,6 +24,7 @@
 		7852121F1C39EE6D005FE5DF /* CAScheduleDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7852121E1C39EE6D005FE5DF /* CAScheduleDescriptionTableViewCell.m */; };
 		785212221C39EEA9005FE5DF /* CACompanyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212211C39EEA9005FE5DF /* CACompanyTableViewCell.m */; };
 		785212251C39EECB005FE5DF /* CAEventTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212241C39EECB005FE5DF /* CAEventTableViewCell.m */; };
+		785212281C39F384005FE5DF /* CAScheduleDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 785212271C39F384005FE5DF /* CAScheduleDescriptionViewController.m */; };
 		7859D46E1C36ED8F00371DEF /* WindowsAzureMobileServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */; };
 		7867B0CA1C322E000001115D /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 7867B0C91C322E000001115D /* sad.png */; };
 		78B0D1F11C371B81001CB717 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B0D1F01C371B81001CB717 /* EventsViewController.m */; };
@@ -39,7 +40,6 @@
 		78B282BE1C30EEDE00EA579A /* calendar8.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B31C30EEDE00EA579A /* calendar8.png */; };
 		78B282BF1C30EEDE00EA579A /* calendar9.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B41C30EEDE00EA579A /* calendar9.png */; };
 		78B282C01C30EEDE00EA579A /* calendar10.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B282B51C30EEDE00EA579A /* calendar10.png */; };
-		78B282C61C30FA6200EA579A /* RoutePathTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B282C51C30FA6200EA579A /* RoutePathTableViewController.m */; };
 		78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */; };
 		78B323591C31ADC40031A315 /* picture_removed.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323571C31ADC40031A315 /* picture_removed.png */; };
 		78B3235A1C31ADC40031A315 /* picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 78B323581C31ADC40031A315 /* picture.png */; };
@@ -124,6 +124,8 @@
 		785212211C39EEA9005FE5DF /* CACompanyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CACompanyTableViewCell.m; sourceTree = "<group>"; };
 		785212231C39EECB005FE5DF /* CAEventTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAEventTableViewCell.h; sourceTree = "<group>"; };
 		785212241C39EECB005FE5DF /* CAEventTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAEventTableViewCell.m; sourceTree = "<group>"; };
+		785212261C39F384005FE5DF /* CAScheduleDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAScheduleDescriptionViewController.h; sourceTree = "<group>"; };
+		785212271C39F384005FE5DF /* CAScheduleDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAScheduleDescriptionViewController.m; sourceTree = "<group>"; };
 		7859D46D1C36ED8F00371DEF /* WindowsAzureMobileServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindowsAzureMobileServices.framework; sourceTree = "<group>"; };
 		7867B0C91C322E000001115D /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
 		78B0D1EF1C371B81001CB717 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
@@ -140,8 +142,6 @@
 		78B282B31C30EEDE00EA579A /* calendar8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar8.png; sourceTree = "<group>"; };
 		78B282B41C30EEDE00EA579A /* calendar9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar9.png; sourceTree = "<group>"; };
 		78B282B51C30EEDE00EA579A /* calendar10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar10.png; sourceTree = "<group>"; };
-		78B282C41C30FA6200EA579A /* RoutePathTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutePathTableViewController.h; sourceTree = "<group>"; };
-		78B282C51C30FA6200EA579A /* RoutePathTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutePathTableViewController.m; sourceTree = "<group>"; };
 		78B323541C31A7B20031A315 /* CompaniesCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompaniesCategoryTableViewController.h; sourceTree = "<group>"; };
 		78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompaniesCategoryTableViewController.m; sourceTree = "<group>"; };
 		78B323571C31ADC40031A315 /* picture_removed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = picture_removed.png; sourceTree = "<group>"; };
@@ -305,8 +305,6 @@
 			children = (
 				78BAFBF31C2F46F500FEF250 /* OptionTableViewController.h */,
 				78BAFBF41C2F46F500FEF250 /* OptionTableViewController.m */,
-				78B282C41C30FA6200EA579A /* RoutePathTableViewController.h */,
-				78B282C51C30FA6200EA579A /* RoutePathTableViewController.m */,
 				78B323541C31A7B20031A315 /* CompaniesCategoryTableViewController.h */,
 				78B323551C31A7B20031A315 /* CompaniesCategoryTableViewController.m */,
 				78B3235B1C31B1E60031A315 /* CompaniesTableViewController.h */,
@@ -323,6 +321,8 @@
 				785211FD1C39CE56005FE5DF /* CABaseViewController.m */,
 				785211FF1C39E7EB005FE5DF /* CAScheduleViewController.h */,
 				785212001C39E7EB005FE5DF /* CAScheduleViewController.m */,
+				785212261C39F384005FE5DF /* CAScheduleDescriptionViewController.h */,
+				785212271C39F384005FE5DF /* CAScheduleDescriptionViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -617,7 +617,6 @@
 				7852120D1C39EBE0005FE5DF /* CAScheduleDescription.m in Sources */,
 				785212131C39ED14005FE5DF /* CACompany.m in Sources */,
 				78BAFBBD1C2F454500FEF250 /* AppDelegate.m in Sources */,
-				78B282C61C30FA6200EA579A /* RoutePathTableViewController.m in Sources */,
 				785212221C39EEA9005FE5DF /* CACompanyTableViewCell.m in Sources */,
 				78314BA51C364BDD00F882C0 /* EventDetailViewController.m in Sources */,
 				78B323561C31A7B20031A315 /* CompaniesCategoryTableViewController.m in Sources */,
@@ -632,6 +631,7 @@
 				7852121F1C39EE6D005FE5DF /* CAScheduleDescriptionTableViewCell.m in Sources */,
 				78BAFBF51C2F46F500FEF250 /* OptionTableViewController.m in Sources */,
 				78BAFBBA1C2F454500FEF250 /* main.m in Sources */,
+				785212281C39F384005FE5DF /* CAScheduleDescriptionViewController.m in Sources */,
 				785211FB1C39CDC5005FE5DF /* CARouteViewController.m in Sources */,
 				785212191C39ED4D005FE5DF /* CAEvent.m in Sources */,
 				785212071C39EB92005FE5DF /* CARoute.m in Sources */,

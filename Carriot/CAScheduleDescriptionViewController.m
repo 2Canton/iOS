@@ -1,33 +1,24 @@
 //
-//  RoutePathTableViewController.m
+//  CAScheduleDescriptionViewController.m
 //  Carriot
 //
-//  Created by user on 12/27/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "RoutePathTableViewController.h"
+#import "CAScheduleDescriptionViewController.h"
 #import "CAScheduleDescription.h"
 #import "CAScheduleDescriptionTableViewCell.h"
 #import "AppDelegate.h"
 
-@interface RoutePathTableViewController ()
-{
-    NSMutableArray * collection;
-}
-@end
-
-@implementation RoutePathTableViewController
+@implementation CAScheduleDescriptionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // se establece la imagen de fondo
-    [self.tableView setBackgroundColor:[UIColor clearColor]];
-    UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-    [tableBackgroundView setFrame: self.tableView.frame];
-    
-    [self.tableView setBackgroundView:tableBackgroundView];
+
+    [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
     
@@ -44,7 +35,7 @@
 
 - (void) loadData
 {
-    collection = [[NSMutableArray alloc]init];
+    self.collection = [[NSMutableArray alloc]init];
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
@@ -75,7 +66,7 @@
                        
                        
                        
-                       [collection addObject:sheduleDescription];
+                       [self.collection addObject:sheduleDescription];
                        
                    }
                    
@@ -97,7 +88,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return collection.count;
+    return self.collection.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -120,13 +111,13 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString * cellIdentifier = @"routePathTableViewCell";
+    static NSString * cellIdentifier = @"scheduleDescriptionTableViewCell";
     
     CAScheduleDescriptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     long row = [indexPath section];
     
-    CAScheduleDescription *option = [collection objectAtIndex:row];
+    CAScheduleDescription *option = [self.collection objectAtIndex:row];
     
     // obtenemos las cifras que correspondes a la hora
     NSString * hourAux = [option.hora substringToIndex:2];
@@ -140,7 +131,7 @@
     // se verifica si la hora es menor a 12
     if (hourInt < 12) {
         hourAux = [NSString stringWithFormat:@"%@%@",option.hora,
-            @" am"];
+                   @" am"];
     }
     else if (hourInt == 12)
     {
@@ -150,8 +141,8 @@
     else{
         hourAux = [NSString stringWithFormat:@"%i%@%@",hourInt - 12,minutes,
                    @" pm"];
-
-
+        
+        
     }
     
     [cell.lblPlace setText:option.nombresitiosalida];
@@ -163,7 +154,6 @@
     
     return cell;
 }
-
 
 
 @end

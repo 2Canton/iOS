@@ -12,7 +12,7 @@
 #import "CAOptionTableViewCell.h"
 #import "AppDelegate.h"
 #include <stdlib.h>
-#import "RoutePathTableViewController.h"
+#import "CAScheduleDescriptionViewController.h"
 
 @interface CAScheduleViewController ()
 
@@ -144,15 +144,15 @@
 {
     
     // mostramos el segue
-    [self performSegueWithIdentifier:@"routePath" sender:self];
+    [self performSegueWithIdentifier:@"scheduleDescription" sender:self];
     
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"routePath"])
+    if([[segue identifier] isEqualToString:@"scheduleDescription"])
     {
-        RoutePathTableViewController * view = [segue destinationViewController];
+        CAScheduleDescriptionViewController * view = [segue destinationViewController];
         
         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
         
