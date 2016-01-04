@@ -7,8 +7,8 @@
 //
 
 #import "RoutePathTableViewController.h"
-#import "RoutePath.h"
-#import "HourDescriptionTableViewCell.h"
+#import "CAScheduleDescription.h"
+#import "CAScheduleDescriptionTableViewCell.h"
 #import "AppDelegate.h"
 
 @interface RoutePathTableViewController ()
@@ -65,17 +65,17 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       RoutePath *routePath = [[RoutePath alloc] init];
+                       CAScheduleDescription *sheduleDescription = [[CAScheduleDescription alloc] init];
                        
                        for (NSString *key in item) {
-                           if ([routePath respondsToSelector:NSSelectorFromString(key)]) {
-                               [routePath setValue:[item valueForKey:key] forKey:key];
+                           if ([sheduleDescription respondsToSelector:NSSelectorFromString(key)]) {
+                               [sheduleDescription setValue:[item valueForKey:key] forKey:key];
                            }
                        }
                        
                        
                        
-                       [collection addObject:routePath];
+                       [collection addObject:sheduleDescription];
                        
                    }
                    
@@ -122,11 +122,11 @@
 {
     static NSString * cellIdentifier = @"routePathTableViewCell";
     
-    HourDescriptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAScheduleDescriptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     long row = [indexPath section];
     
-    RoutePath *option = [collection objectAtIndex:row];
+    CAScheduleDescription *option = [collection objectAtIndex:row];
     
     // obtenemos las cifras que correspondes a la hora
     NSString * hourAux = [option.hora substringToIndex:2];

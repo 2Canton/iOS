@@ -1,14 +1,14 @@
 //
-//  OptionTableViewCell.m
+//  CAScheduleDescriptionTableViewCell.m
 //  Carriot
 //
-//  Created by user on 12/26/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "OptionTableViewCell.h"
+#import "CAScheduleDescriptionTableViewCell.h"
 
-@implementation OptionTableViewCell
+@implementation CAScheduleDescriptionTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
@@ -22,9 +22,7 @@
 
 - (void)setFrame:(CGRect)frame {
     frame.origin.x += 15;
-    frame.origin.y += 15;
     frame.size.width -= 2 * 15;
-    frame.size.height -= 2 * 5;
     [super setFrame:frame];
 }
 

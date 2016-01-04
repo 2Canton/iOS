@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Event.h"
+#import "CAEvent.h"
 
 @interface EventDetailViewController : UIViewController
 
-@property (strong,nonatomic) Event * event;
+@property (strong,nonatomic) CAEvent * event;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UIImageView *imgBanner;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;

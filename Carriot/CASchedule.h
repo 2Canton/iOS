@@ -1,14 +1,14 @@
 //
-//  Schedule.h
+//  CASchedule.h
 //  Carriot
 //
-//  Created by user on 12/27/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Schedule : NSObject
+@interface CASchedule : NSObject
 
 @property (nonatomic, retain) NSString *id;
 @property (nonatomic, retain) NSString *dias;

@@ -1,20 +1,20 @@
 //
-//  RoutePath.m
+//  CAScheduleDescription.m
 //  Carriot
 //
-//  Created by user on 12/27/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "RoutePath.h"
+#import "CAScheduleDescription.h"
 
-@implementation RoutePath
+@implementation CAScheduleDescription
 
 - (id) initWithPlace: (NSString *) pnombresitiosalida
                 Hour: (NSString *) phora;
 
 {
-
+    
     if (self = [super init])
     {
         _nombresitiosalida = pnombresitiosalida;

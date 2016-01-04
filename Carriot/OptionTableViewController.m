@@ -7,8 +7,8 @@
 //
 
 #import "OptionTableViewController.h"
-#import "Option.h"
-#import "OptionTableViewCell.h"
+#import "CAOption.h"
+#import "CAOptionTableViewCell.h"
 
 @interface OptionTableViewController ()
 {
@@ -47,14 +47,14 @@
 {
     optionsArray = [[NSMutableArray alloc]init];
     
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Historia" PictureURL:@"history.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Rutas" PictureURL:@"routes.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Sitios de interés" PictureURL:@"building.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Eventos" PictureURL:@"event.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Religión" PictureURL:@"church.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Facebook" PictureURL:@"facebook.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Sitio Web" PictureURL:@"website.png"]];
-    [optionsArray addObject:[[Option alloc] initWithTitle:@"Contacto" PictureURL:@"message.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Historia" PictureURL:@"history.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Rutas" PictureURL:@"routes.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Sitios de interés" PictureURL:@"building.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Eventos" PictureURL:@"event.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Religión" PictureURL:@"church.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Facebook" PictureURL:@"facebook.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Sitio Web" PictureURL:@"website.png"]];
+    [optionsArray addObject:[[CAOption alloc] initWithTitle:@"Contacto" PictureURL:@"message.png"]];
 }
 
 
@@ -88,11 +88,11 @@
 {
     static NSString * cellIdentifier = @"optionTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     long row = [indexPath section];
     
-    Option *option = [optionsArray objectAtIndex:row];
+    CAOption *option = [optionsArray objectAtIndex:row];
     
     [cell.lblTitle setText:option.title];
     [cell.imgLogo setImage:[UIImage imageNamed:option.image]];

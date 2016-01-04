@@ -7,8 +7,8 @@
 //
 
 #import "CompaniesTableViewController.h"
-#import "CompanyTableViewCell.h"
-#import "Company.h"
+#import "CACompanyTableViewCell.h"
+#import "CACompany.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -48,7 +48,7 @@
     collection = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 10; i++) {
-        [collection addObject:[[Company alloc] initWithId:@"1"
+        [collection addObject:[[CACompany alloc] initWithId:@"1"
                                                      Name:@"Suuuuuuuuuuuuuuuuuuuuuuuuuuuuuper nooooooooombreeeeeee lml "
                                                   Address:@"300 metros oeste del cementerio de Puriscal"
                                                  Schedule:@"Lunes a Viernes de 7:00am a 7:00pm"
@@ -81,7 +81,7 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       Company *company = [[Company alloc] init];
+                       CACompany *company = [[CACompany alloc] init];
                        
                        for (NSString *key in item) {
                            if ([company respondsToSelector:NSSelectorFromString(key)]) {
@@ -135,15 +135,15 @@
 {
     static NSString * cellIdentifier = @"companyTableViewCell";
     
-    CompanyTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CACompanyTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[CompanyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CACompanyTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    Company  *company = [collection objectAtIndex:row];
+    CACompany  *company = [collection objectAtIndex:row];
     
     [cell.lblName setText:company.nombre];
     

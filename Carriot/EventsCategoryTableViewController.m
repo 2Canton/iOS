@@ -7,8 +7,8 @@
 //
 
 #import "EventsCategoryTableViewController.h"
-#import "OptionTableViewCell.h"
-#import "EventCategory.h"
+#import "CAOptionTableViewCell.h"
+#import "CAEventCategory.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -69,7 +69,7 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       EventCategory *eventCategory = [[EventCategory alloc] init];
+                       CAEventCategory *eventCategory = [[CAEventCategory alloc] init];
                        
                        for (NSString *key in item) {
                            if ([eventCategory respondsToSelector:NSSelectorFromString(key)]) {
@@ -124,15 +124,15 @@
 {
     static NSString * cellIdentifier = @"eventCategoryTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[OptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CAOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    EventCategory  *eventCategory = [collection objectAtIndex:row];
+    CAEventCategory  *eventCategory = [collection objectAtIndex:row];
     
     [cell.lblTitle setText:eventCategory.nombre];
     
@@ -160,7 +160,7 @@
         
         long row = [myIndexPath section];
         
-        EventCategory  *eventCategory = [collection objectAtIndex:row];
+        CAEventCategory  *eventCategory = [collection objectAtIndex:row];
         
         view.idCategory = eventCategory.id;
     }

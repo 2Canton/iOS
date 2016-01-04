@@ -1,14 +1,14 @@
 //
-//  CompanyTableViewCell.m
+//  CACompanyTableViewCell.m
 //  Carriot
 //
-//  Created by user on 12/28/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "CompanyTableViewCell.h"
+#import "CACompanyTableViewCell.h"
 
-@implementation CompanyTableViewCell
+@implementation CACompanyTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code

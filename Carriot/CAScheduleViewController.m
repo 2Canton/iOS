@@ -8,8 +8,8 @@
 
 #import "CAScheduleViewController.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
-#import "Schedule.h"
-#import "OptionTableViewCell.h"
+#import "CASchedule.h"
+#import "CAOptionTableViewCell.h"
 #import "AppDelegate.h"
 #include <stdlib.h>
 #import "RoutePathTableViewController.h"
@@ -61,7 +61,7 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       Schedule *schedule = [[Schedule alloc] init];
+                       CASchedule *schedule = [[CASchedule alloc] init];
                        
                        for (NSString *key in item) {
                            if ([schedule respondsToSelector:NSSelectorFromString(key)]) {
@@ -116,11 +116,11 @@
 {
     static NSString * cellIdentifier = @"scheduleTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     long row = [indexPath section];
     
-    Schedule  *schedule = [self.collection objectAtIndex:row];
+    CASchedule  *schedule = [self.collection objectAtIndex:row];
     
     
     [cell.lblTitle setText:schedule.dias];
@@ -158,7 +158,7 @@
         
         long row = [myIndexPath section];
         
-        Schedule  *schedule = [self.collection objectAtIndex:row];
+        CASchedule  *schedule = [self.collection objectAtIndex:row];
         
         view.idRoute = _idRoute;
         view.idSchedule = schedule.id;

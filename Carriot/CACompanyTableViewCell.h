@@ -1,14 +1,15 @@
 //
-//  CompanyTableViewCell.h
+//  CACompanyTableViewCell.h
 //  Carriot
 //
-//  Created by user on 12/28/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CompanyTableViewCell : UITableViewCell
+@interface CACompanyTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblTime;

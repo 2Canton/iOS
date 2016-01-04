@@ -8,8 +8,8 @@
 
 #import "EventsViewController.h"
 #import "AppDelegate.h"
-#import "EventTableViewCell.h"
-#import "Event.h"
+#import "CAEventTableViewCell.h"
+#import "CAEvent.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "EventDetailViewController.h"
@@ -64,7 +64,7 @@
                    for(NSDictionary *item in result)
                    {
                        
-                       Event *event = [[Event alloc] init];
+                       CAEvent *event = [[CAEvent alloc] init];
                        
                        for (NSString *key in item) {
                            if ([event respondsToSelector:NSSelectorFromString(key)]) {
@@ -126,15 +126,15 @@
 {
     static NSString * cellIdentifier = @"eventTableViewCell";
     
-    EventTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAEventTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[EventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CAEventTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    Event  *event = [collection objectAtIndex:row];
+    CAEvent  *event = [collection objectAtIndex:row];
     
     [cell.lblName setText:event.nombre];
     
@@ -164,7 +164,7 @@
         
         long row = [myIndexPath section];
         
-        Event  *event = [collection objectAtIndex:row];
+        CAEvent  *event = [collection objectAtIndex:row];
         
         view.event = event;
     }

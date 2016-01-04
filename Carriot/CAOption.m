@@ -1,14 +1,14 @@
 //
-//  Option.m
+//  CAOption.m
 //  Carriot
 //
-//  Created by user on 12/26/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
-#import "Option.h"
+#import "CAOption.h"
 
-@implementation Option
+@implementation CAOption
 
 - (id) initWithTitle: (NSString *) title
           PictureURL: (NSString *) pictureURL
@@ -22,5 +22,6 @@
     
     return self;
 }
+
 
 @end

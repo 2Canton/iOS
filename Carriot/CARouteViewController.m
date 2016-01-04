@@ -8,9 +8,8 @@
 
 #import "CARouteViewController.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
-#import "Route.h"
-#import "OptionTableViewCell.h"
-#import "Option.h"
+#import "CARoute.h"
+#import "CAOptionTableViewCell.h"
 #import "AppDelegate.h"
 #import "CAScheduleViewController.h"
 
@@ -72,7 +71,7 @@
                 // items is NSArray of records that match query
                 //NSLog(@"Name: %@", [item objectForKey:@"nombre"]);
                 
-                Route *route = [[Route alloc] init];
+                CARoute *route = [[CARoute alloc] init];
                 
                 for (NSString *key in item) {
                     if ([route respondsToSelector:NSSelectorFromString(key)]) {
@@ -129,11 +128,11 @@
 {
     static NSString * cellIdentifier = @"routeTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     long row = [indexPath section];
     
-    Route  *route = [self.collection objectAtIndex:row];
+    CARoute  *route = [self.collection objectAtIndex:row];
     
     
     [cell.lblTitle setText:route.nombre];
@@ -159,7 +158,7 @@
         
         long row = [myIndexPath section];
         
-        Route  *route = [self.collection  objectAtIndex:row];
+        CARoute  *route = [self.collection  objectAtIndex:row];
         
         view.idRoute = route.id;
     }

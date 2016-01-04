@@ -7,8 +7,8 @@
 //
 
 #import "CompaniesCategoryTableViewController.h"
-#import "OptionTableViewCell.h"
-#import "CompaniesCategory.h"
+#import "CAOptionTableViewCell.h"
+#import "CACompaniesCategory.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
 #import "CompaniesTableViewController.h"
@@ -50,7 +50,7 @@
     collection = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 10; i++) {
-         [collection addObject:[[CompaniesCategory alloc] initWithId:@"1" Name:@"Nombre1" PictureURL:@"url" Description:@"desc"]];
+         [collection addObject:[[CACompaniesCategory alloc] initWithId:@"1" Name:@"Nombre1" PictureURL:@"url" Description:@"desc"]];
     }
    
 
@@ -75,7 +75,7 @@
             {
                 // items is NSArray of records that match query
                 
-                CompaniesCategory *companiesCategory = [[CompaniesCategory alloc] init];
+                CACompaniesCategory *companiesCategory = [[CACompaniesCategory alloc] init];
                 
                 for (NSString *key in item) {
                     if ([companiesCategory respondsToSelector:NSSelectorFromString(key)]) {
@@ -131,15 +131,15 @@
 {
     static NSString * cellIdentifier = @"companiesCategoryTableViewCell";
     
-    OptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CAOptionTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (cell == nil) {
-        cell = [[OptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[CAOptionTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     long row = [indexPath section];
     
-    CompaniesCategory  *companyCategory = [collection objectAtIndex:row];
+    CACompaniesCategory  *companyCategory = [collection objectAtIndex:row];
     
     [cell.lblTitle setText:companyCategory.nombre];
     
@@ -163,7 +163,7 @@
         
         long row = [myIndexPath section];
         
-        CompaniesCategory  *companiesCategory = [collection objectAtIndex:row];
+        CACompaniesCategory  *companiesCategory = [collection objectAtIndex:row];
         
         view.idCategory = companiesCategory.id;
     }

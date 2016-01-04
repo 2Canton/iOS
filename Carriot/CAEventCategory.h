@@ -1,14 +1,14 @@
 //
-//  EventCategory.h
+//  CAEventCategory.h
 //  Carriot
 //
-//  Created by user on 12/29/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface EventCategory : NSObject
+@interface CAEventCategory : NSObject
 
 @property (nonatomic, retain) NSString *id;
 @property (nonatomic, retain) NSString *nombre;

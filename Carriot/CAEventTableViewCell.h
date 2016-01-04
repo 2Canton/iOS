@@ -1,14 +1,14 @@
 //
-//  EventTableViewCell.h
+//  CAEventTableViewCell.h
 //  Carriot
 //
-//  Created by user on 12/29/15.
-//  Copyright © 2015 user. All rights reserved.
+//  Created by user on 1/3/16.
+//  Copyright © 2016 user. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface EventTableViewCell : UITableViewCell
+@interface CAEventTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UIImageView *imgLogo;
