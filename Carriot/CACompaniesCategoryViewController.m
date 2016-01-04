@@ -11,7 +11,7 @@
 #import "CACompaniesCategory.h"
 #import <WindowsAzureMobileServices/WindowsAzureMobileServices.h>
 #import "AppDelegate.h"
-#import "CompaniesTableViewController.h"
+#import "CACompaniesViewController.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface CACompaniesCategoryViewController ()
@@ -149,7 +149,7 @@
 {
     if([[segue identifier] isEqualToString:@"companies"])
     {
-        CompaniesTableViewController * view = [segue destinationViewController];
+        CACompaniesViewController * view = [segue destinationViewController];
         
         NSIndexPath * myIndexPath = [self.tableView indexPathForSelectedRow];
         
