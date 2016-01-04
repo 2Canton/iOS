@@ -25,6 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // se establece el título
+    [self setTitle:@"Rutas"];
+    
     self.collection = [[NSMutableArray alloc] init];
     
     [self.tableView setDataSource:self];
@@ -168,7 +171,7 @@
         
         CARoute  *route = [self.collection  objectAtIndex:row];
         
-        view.idRoute = route.id;
+        view.route = route;
     }
 }
 

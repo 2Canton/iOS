@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CABaseViewController.h"
+#import "CACompaniesCategory.h"
 
 @interface CACompaniesViewController : CABaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong,nonatomic) NSString * idCategory;
+@property (strong,nonatomic) CACompaniesCategory * category;
 
 @end

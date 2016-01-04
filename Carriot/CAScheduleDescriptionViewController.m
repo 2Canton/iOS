@@ -16,6 +16,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // se establece el título
+    [self setTitle:[NSString stringWithFormat:@"%@ (%@)",_route.nombre,_schedule.dias]];
+    
     // se establece la imagen de fondo
 
     [self.tableView setDataSource:self];
@@ -39,7 +42,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    NSDictionary *parameters = @{ @"idRuta": _idRoute, @"idHorario" : _idSchedule };
+    NSDictionary *parameters = @{ @"idRuta": _route.id, @"idHorario" : _schedule.id };
     
     [client invokeAPI:@"scheduledescription"
                  body:nil

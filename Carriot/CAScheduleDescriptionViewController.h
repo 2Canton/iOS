@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "CABaseViewController.h"
+#import "CARoute.h"
+#import "CASchedule.h"
 
 @interface CAScheduleDescriptionViewController : CABaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong,nonatomic) NSString * idRoute;
-@property (strong,nonatomic) NSString * idSchedule;
+@property (strong,nonatomic) CARoute * route;
+@property (strong,nonatomic) CASchedule * schedule;
 
 @end

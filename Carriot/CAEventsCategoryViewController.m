@@ -23,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // se establece el título
+    [self setTitle:@"Tipo de Eventos"];
+    
     [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
@@ -163,7 +166,7 @@
         
         CAEventCategory  *eventCategory = [self.collection objectAtIndex:row];
         
-        view.idCategory = eventCategory.id;
+        view.category = eventCategory;
     }
 }
 

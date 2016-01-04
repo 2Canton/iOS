@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CABaseViewController.h"
+#import "CAEventCategory.h"
 
 @interface CAEventsViewController : CABaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong,nonatomic) NSString * idCategory;
+@property (strong,nonatomic) CAEventCategory * category;
 
 @end

@@ -24,6 +24,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // se establece el título
+    [self setTitle:@"Tipo Empresas"];
+    
     [self.tableView setDataSource:self];
     
     [self.activityIndicator startAnimating];
@@ -171,7 +174,7 @@
         
         CACompaniesCategory  *companiesCategory = [self.collection objectAtIndex:row];
         
-        view.idCategory = companiesCategory.id;
+        view.category = companiesCategory;
     }
 }
 

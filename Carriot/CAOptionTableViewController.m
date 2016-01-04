@@ -21,15 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // se establece el título
+    [self setTitle:@"Opciones"];
+    
     // se establece la imagen de fondo
     [self.tableView setBackgroundColor:[UIColor clearColor]];
     UIImageView *tableBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"iglesia.png"]];
-    
-    
-    
-    
     [tableBackgroundView setFrame: self.tableView.frame];
-    
     [self.tableView setBackgroundView:tableBackgroundView];
     
     // cargamos los datos en un array

@@ -29,6 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // se establece el título
+    [self setTitle:[NSString stringWithFormat:@"Empresas de %@",_category.nombre]];
+    
     // se establen las gesture recognizers
 
     [self.tableView setDataSource:self];
@@ -69,7 +72,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    NSDictionary *parameters = @{ @"idTipoEmpresa": _idCategory };
+    NSDictionary *parameters = @{ @"idTipoEmpresa": _category.id };
     
     [client invokeAPI:@"companies_category"
                  body:nil

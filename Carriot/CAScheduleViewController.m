@@ -22,6 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // se establece el título
+    [self setTitle:[NSString stringWithFormat:@"Horarios de %@",_route.nombre]];
+    
     // Do any additional setup after loading the view.
     
     [self.tableView setDataSource:self];
@@ -44,7 +48,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    NSDictionary *parameters = @{ @"id": _idRoute};
+    NSDictionary *parameters = @{ @"id": _route.id};
     
     [client invokeAPI:@"horarioruta"
                  body:nil
@@ -165,8 +169,8 @@
         
         CASchedule  *schedule = [self.collection objectAtIndex:row];
         
-        view.idRoute = _idRoute;
-        view.idSchedule = schedule.id;
+        view.route = _route;
+        view.schedule = schedule;
     }
 }
 

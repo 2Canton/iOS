@@ -150,10 +150,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="169" y="303"/>
         </scene>
-        <!--View Controller-->
+        <!--Religión-->
         <scene sceneID="JvO-fP-Ne2">
             <objects>
-                <viewController id="jLu-YJ-E4q" sceneMemberID="viewController">
+                <viewController title="Religión" id="jLu-YJ-E4q" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VJA-kS-2cb"/>
                         <viewControllerLayoutGuide type="bottom" id="Yu3-iv-GEn"/>
@@ -672,10 +672,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="1713" y="2035"/>
         </scene>
-        <!--Events-->
+        <!--Eventos-->
         <scene sceneID="bGK-QV-qjI">
             <objects>
-                <viewController title="Events" id="Xor-WP-pUZ" customClass="CAEventsViewController" sceneMemberID="viewController">
+                <viewController title="Eventos" id="Xor-WP-pUZ" customClass="CAEventsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lDK-b9-Z5U"/>
                         <viewControllerLayoutGuide type="bottom" id="7VJ-Ox-9EF"/>
@@ -899,10 +899,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="895" y="2035"/>
         </scene>
-        <!--Route View Controller-->
+        <!--Rutas-->
         <scene sceneID="qAO-wy-ys2">
             <objects>
-                <viewController id="CG2-i0-3ex" customClass="CARouteViewController" sceneMemberID="viewController">
+                <viewController title="Rutas" id="CG2-i0-3ex" customClass="CARouteViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IIF-ei-qyH"/>
                         <viewControllerLayoutGuide type="bottom" id="rcZ-sP-Fac"/>
@@ -1084,10 +1084,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="1837" y="345"/>
         </scene>
-        <!--Horario-->
+        <!--Horarios-->
         <scene sceneID="cFn-g7-1j8">
             <objects>
-                <viewController title="Horario" id="e7N-p0-hD3" customClass="CAScheduleViewController" sceneMemberID="viewController">
+                <viewController title="Horarios" id="e7N-p0-hD3" customClass="CAScheduleViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OKn-6p-Zuk"/>
                         <viewControllerLayoutGuide type="bottom" id="1nz-qP-mSD"/>
@@ -1515,10 +1515,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="3456" y="303"/>
         </scene>
-        <!--Categoría Empresas-->
+        <!--Tipo Empresas-->
         <scene sceneID="bYc-Om-x8M">
             <objects>
-                <viewController title="Categoría Empresas" id="cFY-XW-eu8" customClass="CACompaniesCategoryViewController" sceneMemberID="viewController">
+                <viewController title="Tipo Empresas" id="cFY-XW-eu8" customClass="CACompaniesCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oqS-se-sjx"/>
                         <viewControllerLayoutGuide type="bottom" id="j5y-z9-rg0"/>
@@ -2008,10 +2008,10 @@ Antiguamente, la región que hoy corresponde al cantón de Puriscal fue conocida
             </objects>
             <point key="canvasLocation" x="2438" y="1187"/>
         </scene>
-        <!--Events Category View Controller-->
+        <!--Tipo de Eventos-->
         <scene sceneID="QI8-eJ-w4l">
             <objects>
-                <viewController id="1UF-43-KLc" customClass="CAEventsCategoryViewController" sceneMemberID="viewController">
+                <viewController title="Tipo de Eventos" id="1UF-43-KLc" customClass="CAEventsCategoryViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6F9-qY-0uX"/>
                         <viewControllerLayoutGuide type="bottom" id="E3b-rH-Or3"/>

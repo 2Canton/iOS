@@ -26,6 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // se establece el título
+    [self setTitle:[NSString stringWithFormat:@"Eventos de %@",_category.nombre]];
+    
     dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"dd/MM/yyyy"];
     
@@ -47,7 +50,7 @@
     
     MSClient *client = [(AppDelegate *) [[UIApplication sharedApplication] delegate] client];
     
-    NSDictionary *parameters = @{ @"idTipoEvento": _idCategory };
+    NSDictionary *parameters = @{ @"idTipoEvento": _category.id };
     
     [client invokeAPI:@"eventscategory"
                  body:nil
